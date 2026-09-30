@@ -1,0 +1,66 @@
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand" href="/">
+          <img src="/img/logo.svg" alt="" width="34" height="34">
+          <span>Gaming <b>by Nomi</b></span>
+        </a>
+        <p><%= config.tagline %> Genuine products, cash on delivery and real support on WhatsApp.</p>
+        <div class="footer__social">
+          <% Object.keys(config.social).forEach(function (k) { if (config.social[k]) { %>
+            <a href="<%= config.social[k] %>" target="_blank" rel="noopener" aria-label="<%= k %>"><svg class="i"><use href="#i-<%= k %>"/></svg></a>
+          <% } }) %>
+          <a href="<%= waLink() %>" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i"><use href="#i-whatsapp"/></svg></a>
+          <a href="mailto:<%= config.email %>" aria-label="Email"><svg class="i"><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h4>Shop</h4>
+        <% categories.slice(0, 6).forEach(function (c) { %>
+          <a href="/shop?category=<%= c.slug %>"><%= c.name %></a>
+        <% }) %>
+      </div>
+      <div class="footer__col">
+        <h4>More</h4>
+        <% categories.slice(6).forEach(function (c) { %>
+          <a href="/shop?category=<%= c.slug %>"><%= c.name %></a>
+        <% }) %>
+      </div>
+      <div class="footer__col">
+        <h4>Help</h4>
+        <a href="/policies/shipping">Shipping &amp; Delivery</a>
+        <a href="/policies/returns">Returns &amp; Warranty</a>
+        <a href="/policies/privacy">Privacy Policy</a>
+        <a href="/policies/terms">Terms &amp; Conditions</a>
+        <a href="/about">About Us</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="footer__col">
+        <h4>Get in touch</h4>
+        <a href="<%= waLink() %>" target="_blank" rel="noopener"><svg class="i i-sm"><use href="#i-whatsapp"/></svg> <%= config.phoneDisplay %></a>
+        <a href="tel:+<%= config.whatsapp %>"><svg class="i i-sm"><use href="#i-phone"/></svg> Call us</a>
+        <a href="mailto:<%= config.email %>"><svg class="i i-sm"><use href="#i-mail"/></svg> <%= config.email %></a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; <%= year %> <%= config.storeName %>. All rights reserved.</span>
+      <span>Cash on Delivery all over Pakistan</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="<%= waLink('Hi Gaming by Nomi! I have a question.') %>" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg class="i"><use href="#i-whatsapp"/></svg>
+</a>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<script>window.STORE = <%- JSON.stringify({ currency: config.currency, shippingFee: config.shippingFee, freeShippingOver: config.freeShippingOver }) %>;</script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>

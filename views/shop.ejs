@@ -1,0 +1,55 @@
+<%- include('partials/head') %>
+
+<section class="page-head">
+  <div class="container">
+    <p class="eyebrow reveal"><%= activeCategory ? 'Category' : (q ? 'Search results' : 'The store') %></p>
+    <h1 class="reveal"><%= activeCategory ? activeCategory.name : (q ? '“' + q + '”' : 'Shop everything.') %></h1>
+    <% if (activeCategory) { %><p class="page-head__lead reveal"><%= activeCategory.blurb %></p><% } %>
+  </div>
+</section>
+
+<section class="section section--flush">
+  <div class="container">
+    <div class="chips" role="navigation" aria-label="Categories">
+      <a href="/shop" class="chip<%= !activeCategory ? ' is-active' : '' %>">All</a>
+      <% categories.forEach(function (c) { %>
+        <a href="/shop?category=<%= c.slug %>" class="chip<%= activeCategory && activeCategory.slug === c.slug ? ' is-active' : '' %>"><%= c.name %></a>
+      <% }) %>
+    </div>
+
+    <form class="toolbar" method="get" action="/shop">
+      <% if (activeCategory) { %><input type="hidden" name="category" value="<%= activeCategory.slug %>"><% } %>
+      <% if (q) { %><input type="hidden" name="q" value="<%= q %>"><% } %>
+      <span class="toolbar__count"><%= products.length %> product<%= products.length === 1 ? '' : 's' %></span>
+      <label class="select">
+        <span class="sr-only">Sort by</span>
+        <select name="sort" data-autosubmit>
+          <option value="featured" <%= sort === 'featured' ? 'selected' : '' %>>Featured</option>
+          <option value="newest" <%= sort === 'newest' ? 'selected' : '' %>>Newest</option>
+          <option value="price-asc" <%= sort === 'price-asc' ? 'selected' : '' %>>Price: Low to High</option>
+          <option value="price-desc" <%= sort === 'price-desc' ? 'selected' : '' %>>Price: High to Low</option>
+          <option value="name" <%= sort === 'name' ? 'selected' : '' %>>Name A–Z</option>
+        </select>
+        <svg class="i i-sm"><use href="#i-chevron"/></svg>
+      </label>
+    </form>
+
+    <% if (products.length) { %>
+      <div class="grid">
+        <% products.forEach(function (p) { %><%- include('partials/product-card', { p: p }) %><% }) %>
+      </div>
+    <% } else { %>
+      <div class="empty">
+        <svg class="i i-lg"><use href="#i-search"/></svg>
+        <h2>No products found.</h2>
+        <p>Try another search, or ask us on WhatsApp — we can source it for you.</p>
+        <div class="hero__cta">
+          <a href="/shop" class="btn btn--primary">Browse all</a>
+          <a href="<%= waLink('Hi! I am looking for: ' + (q || '')) %>" class="btn btn--link" target="_blank" rel="noopener">Ask on WhatsApp</a>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

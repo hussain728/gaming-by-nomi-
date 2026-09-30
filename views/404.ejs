@@ -1,0 +1,15 @@
+<%- include('partials/head') %>
+
+<section class="section">
+  <div class="container narrow empty">
+    <p class="eyebrow"><%= typeof serverError !== 'undefined' ? 'Error 500' : 'Error 404' %></p>
+    <h1><%= typeof serverError !== 'undefined' ? 'Something went wrong.' : 'Game over for this page.' %></h1>
+    <p><%= typeof serverError !== 'undefined' ? 'Please try again in a moment.' : 'The page you are looking for does not exist or has moved.' %></p>
+    <div class="hero__cta hero__cta--center">
+      <a href="/" class="btn btn--primary btn--lg">Back to home</a>
+      <a href="/shop" class="btn btn--link btn--lg">Visit the shop</a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

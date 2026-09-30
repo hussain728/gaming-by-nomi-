@@ -1,0 +1,48 @@
+<%- include('partials/head') %>
+<% var f = typeof form !== 'undefined' ? form : {}; %>
+
+<section class="page-head page-head--center">
+  <div class="container narrow">
+    <p class="eyebrow reveal">Contact</p>
+    <h1 class="reveal">We're here to help.</h1>
+    <p class="page-head__lead reveal">Questions about a product, an order or warranty? The fastest way to reach us is WhatsApp.</p>
+  </div>
+</section>
+
+<section class="section section--flush">
+  <div class="container">
+    <div class="contact-cards">
+      <a class="contact-card reveal" href="<%= waLink('Hi Gaming by Nomi!') %>" target="_blank" rel="noopener">
+        <svg class="i i-lg"><use href="#i-whatsapp"/></svg>
+        <h3>WhatsApp</h3><p><%= config.phoneDisplay %></p>
+      </a>
+      <a class="contact-card reveal" href="tel:+<%= config.whatsapp %>">
+        <svg class="i i-lg"><use href="#i-phone"/></svg>
+        <h3>Call</h3><p><%= config.phoneDisplay %></p>
+      </a>
+      <a class="contact-card reveal" href="mailto:<%= config.email %>">
+        <svg class="i i-lg"><use href="#i-mail"/></svg>
+        <h3>Email</h3><p><%= config.email %></p>
+      </a>
+    </div>
+
+    <div class="narrow">
+      <% if (sent) { %>
+        <div class="notice notice--ok reveal"><svg class="i"><use href="#i-check"/></svg> Thanks! Your message has been sent. We'll get back to you soon.</div>
+      <% } %>
+      <form class="form reveal" method="post" action="/contact">
+        <h2>Send a message</h2>
+        <% if (typeof error !== 'undefined' && error) { %><p class="form__error"><%= error %></p><% } %>
+        <div class="form__row">
+          <label class="field"><span>Name *</span><input name="name" required maxlength="80" value="<%= f.name || '' %>"></label>
+          <label class="field"><span>Phone</span><input name="phone" type="tel" maxlength="20" value="<%= f.phone || '' %>"></label>
+        </div>
+        <label class="field"><span>Email</span><input name="email" type="email" maxlength="120" value="<%= f.email || '' %>"></label>
+        <label class="field"><span>Message *</span><textarea name="message" rows="5" required maxlength="2000"><%= f.message || '' %></textarea></label>
+        <button class="btn btn--primary btn--lg btn--block" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

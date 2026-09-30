@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="bud" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34405e"/><stop offset="1" stop-color="#0f1628"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6fb0ff"/><stop offset="1" stop-color="#0a66ff"/></linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9aa6bb"/><stop offset=".5" stop-color="#f3f6fb"/><stop offset="1" stop-color="#8793a9"/></linearGradient>
+  </defs>
+  <ellipse cx="200" cy="368" rx="120" ry="10" fill="#0a66ff" opacity=".08"/>
+  <path d="M130 128c-6 60 10 100 50 130 18 14 20 30 20 44" fill="none" stroke="#1b2336" stroke-width="6" stroke-linecap="round"/>
+  <path d="M270 128c6 60-10 100-50 130-18 14-20 30-20 44" fill="none" stroke="#1b2336" stroke-width="6" stroke-linecap="round"/>
+  <path d="M200 302v24" stroke="#1b2336" stroke-width="7" stroke-linecap="round"/>
+  <rect x="190" y="326" width="20" height="26" rx="5" fill="#1b2336"/>
+  <rect x="194" y="350" width="12" height="20" rx="2" fill="url(#metal)"/>
+  <rect x="193" y="360" width="14" height="2" fill="#6b7384"/>
+  <rect x="226" y="208" width="26" height="54" rx="13" fill="url(#bud)" transform="rotate(38 239 235)"/>
+  <circle cx="240" cy="226" r="4" fill="#6fb0ff" transform="rotate(38 239 235)"/>
+  <g transform="rotate(-22 128 96)">
+    <rect x="112" y="92" width="32" height="56" rx="16" fill="url(#bud)"/>
+    <ellipse cx="128" cy="86" rx="34" ry="30" fill="url(#bud)"/>
+    <ellipse cx="128" cy="80" rx="22" ry="18" fill="url(#blue)"/>
+    <ellipse cx="128" cy="74" rx="10" ry="6" fill="#fff" opacity=".35"/>
+  </g>
+  <g transform="rotate(22 272 96)">
+    <rect x="256" y="92" width="32" height="56" rx="16" fill="url(#bud)"/>
+    <ellipse cx="272" cy="86" rx="34" ry="30" fill="url(#bud)"/>
+    <ellipse cx="272" cy="80" rx="22" ry="18" fill="url(#blue)"/>
+    <ellipse cx="272" cy="74" rx="10" ry="6" fill="#fff" opacity=".35"/>
+  </g>
+</svg>

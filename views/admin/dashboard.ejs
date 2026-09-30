@@ -1,0 +1,93 @@
+<%- include('_head') %>
+<div class="container">
+  <% if (usingDefaultPassword) { %>
+    <div class="notice notice--warn">You are using the default admin password. Set <b>ADMIN_PASSWORD</b> in cPanel → Setup Node.js App → Environment variables, then restart the app.</div>
+  <% } %>
+
+  <div class="stats stats--admin">
+    <div class="stat"><b><%= orders.length %></b><span>Total orders</span></div>
+    <div class="stat"><b><%= orders.filter(function (o) { return o.status === 'new'; }).length %></b><span>New orders</span></div>
+    <div class="stat"><b><%= money(revenue) %></b><span>Order value</span></div>
+    <div class="stat"><b><%= products.length %></b><span>Products</span></div>
+  </div>
+
+  <section id="orders" class="admin-section">
+    <h2>Orders</h2>
+    <% if (!orders.length) { %><p class="muted">No orders yet.</p><% } %>
+    <div class="table-wrap">
+      <table class="table">
+        <% if (orders.length) { %>
+        <thead><tr><th>Order</th><th>Customer</th><th>Items</th><th>Total</th><th>Status</th></tr></thead>
+        <% } %>
+        <tbody>
+        <% orders.forEach(function (o) { %>
+          <tr>
+            <td><b><%= o.id %></b><br><span class="muted small"><%= new Date(o.createdAt).toLocaleString('en-PK') %></span></td>
+            <td>
+              <%= o.customer.name %><br>
+              <a href="https://wa.me/<%= o.customer.phone.replace(/[^0-9]/g, '').replace(/^0/, '92') %>" target="_blank" rel="noopener"><%= o.customer.phone %></a><br>
+              <span class="muted small"><%= o.customer.address %>, <%= o.customer.city %></span>
+              <% if (o.customer.notes) { %><br><span class="small">Note: <%= o.customer.notes %></span><% } %>
+            </td>
+            <td class="small"><% o.items.forEach(function (i) { %><%= i.name %> × <%= i.qty %><br><% }) %></td>
+            <td><b><%= money(o.total) %></b></td>
+            <td>
+              <form method="post" action="/admin/orders/<%= o.id %>/status" class="status-form">
+                <select name="status" data-autosubmit class="pill pill--<%= o.status %>">
+                  <% ['new', 'confirmed', 'shipped', 'delivered', 'cancelled'].forEach(function (s) { %>
+                    <option value="<%= s %>" <%= o.status === s ? 'selected' : '' %>><%= s %></option>
+                  <% }) %>
+                </select>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="products" class="admin-section">
+    <div class="section__head">
+      <h2>Products</h2>
+      <a href="/admin/products/new" class="btn btn--primary"><svg class="i i-sm"><use href="#i-plus"/></svg> Add product</a>
+    </div>
+    <div class="table-wrap">
+      <table class="table">
+        <thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th></th></tr></thead>
+        <tbody>
+        <% products.forEach(function (p) { %>
+          <tr>
+            <td><img src="<%= p.image %>" alt="" class="thumb"></td>
+            <td><b><%= p.name %></b><br><span class="muted small"><%= p.brand %><%= p.featured ? ' · Featured' : '' %><%= p.isNew ? ' · New' : '' %></span></td>
+            <td class="small"><%= p.category %></td>
+            <td><%= money(p.price) %></td>
+            <td><span class="pill pill--<%= p.inStock ? 'delivered' : 'cancelled' %>"><%= p.inStock ? 'In stock' : 'Sold out' %></span></td>
+            <td class="actions">
+              <a href="/admin/products/<%= p.id %>" class="btn btn--outline btn--sm">Edit</a>
+              <form method="post" action="/admin/products/<%= p.id %>/delete" data-confirm="Delete <%= p.name %>?">
+                <button class="btn btn--danger btn--sm" aria-label="Delete"><svg class="i i-sm"><use href="#i-trash"/></svg></button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="messages" class="admin-section">
+    <h2>Messages</h2>
+    <% if (!messages.length) { %><p class="muted">No messages yet.</p><% } %>
+    <% messages.forEach(function (m) { %>
+      <div class="message">
+        <b><%= m.name %></b> <span class="muted small">· <%= new Date(m.createdAt).toLocaleString('en-PK') %></span><br>
+        <span class="small"><%= m.email %> <%= m.phone %></span>
+        <p><%= m.message %></p>
+      </div>
+    <% }) %>
+  </section>
+</div>
+</main>
+<script src="/js/main.js" defer></script>
+</body></html>

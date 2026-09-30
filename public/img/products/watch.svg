@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="strap" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2e5ed8"/><stop offset="1" stop-color="#153a9a"/></linearGradient>
+    <linearGradient id="case" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e9eef7"/><stop offset=".5" stop-color="#ffffff"/><stop offset="1" stop-color="#aeb9cc"/></linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1630"/><stop offset="1" stop-color="#050912"/></linearGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00c2ff"/><stop offset="1" stop-color="#0a66ff"/></linearGradient>
+  </defs>
+  <ellipse cx="200" cy="380" rx="80" ry="8" fill="#0a66ff" opacity=".1"/>
+  <path d="M152 20h96l-8 110h-80z" fill="url(#strap)"/>
+  <path d="M160 270h80l8 104h-96z" fill="url(#strap)"/>
+  <g fill="#0b1f5c" opacity=".35"><rect x="190" y="300" width="20" height="8" rx="4"/><rect x="190" y="322" width="20" height="8" rx="4"/><rect x="190" y="344" width="20" height="8" rx="4"/></g>
+  <rect x="112" y="108" width="176" height="184" rx="46" fill="url(#case)"/>
+  <rect x="284" y="160" width="12" height="36" rx="6" fill="#aeb9cc"/>
+  <rect x="124" y="120" width="152" height="160" rx="36" fill="url(#screen)"/>
+  <circle cx="200" cy="200" r="52" fill="none" stroke="#1b2540" stroke-width="10"/>
+  <circle cx="200" cy="200" r="52" fill="none" stroke="url(#ring)" stroke-width="10" stroke-linecap="round" stroke-dasharray="240 330" transform="rotate(-90 200 200)"/>
+  <circle cx="200" cy="200" r="36" fill="none" stroke="#12a150" stroke-width="7" stroke-linecap="round" stroke-dasharray="150 230" transform="rotate(-90 200 200)" opacity=".9"/>
+  <text x="200" y="208" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">10:09</text>
+  <path d="M140 132c14-8 30-10 44-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".15"/>
+</svg>

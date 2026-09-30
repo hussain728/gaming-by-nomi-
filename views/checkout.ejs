@@ -1,0 +1,46 @@
+<%- include('partials/head') %>
+
+<section class="page-head page-head--sm">
+  <div class="container"><h1 class="reveal">Checkout.</h1></div>
+</section>
+
+<section class="section section--flush">
+  <div class="container">
+    <div class="checkout" data-checkout-page>
+      <form class="form" data-checkout-form novalidate>
+        <h2>Delivery details</h2>
+        <div class="form__row">
+          <label class="field"><span>Full name *</span><input name="name" required autocomplete="name" maxlength="80"></label>
+          <label class="field"><span>Phone / WhatsApp *</span><input name="phone" required type="tel" inputmode="tel" autocomplete="tel" placeholder="03XX XXXXXXX" maxlength="16"></label>
+        </div>
+        <div class="form__row">
+          <label class="field"><span>City *</span><input name="city" required autocomplete="address-level2" maxlength="60"></label>
+          <label class="field"><span>Email (optional)</span><input name="email" type="email" autocomplete="email" maxlength="120"></label>
+        </div>
+        <label class="field"><span>Complete address *</span><textarea name="address" required rows="3" autocomplete="street-address" maxlength="300" placeholder="House no, street, area, landmark"></textarea></label>
+        <label class="field"><span>Order notes (optional)</span><textarea name="notes" rows="2" maxlength="500" placeholder="Colour preference, delivery time…"></textarea></label>
+
+        <div class="pay-method">
+          <svg class="i"><use href="#i-cash"/></svg>
+          <div><b>Cash on Delivery</b><span>Pay in cash when your order arrives. We will confirm your order on WhatsApp.</span></div>
+          <svg class="i pay-method__check"><use href="#i-check"/></svg>
+        </div>
+
+        <p class="form__error" data-form-error hidden></p>
+        <button type="submit" class="btn btn--primary btn--lg btn--block" data-place-order>Place order</button>
+        <p class="muted small">After placing your order, WhatsApp opens with your order details so you can send it to us instantly.</p>
+      </form>
+
+      <aside class="summary" data-cart-summary hidden>
+        <h2>Your order</h2>
+        <div class="summary__items" data-summary-items></div>
+        <div class="summary__row"><span>Subtotal</span><span data-sum-subtotal></span></div>
+        <div class="summary__row"><span>Delivery</span><span data-sum-shipping></span></div>
+        <p class="summary__hint" data-sum-hint></p>
+        <div class="summary__row summary__total"><span>Total</span><span data-sum-total></span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

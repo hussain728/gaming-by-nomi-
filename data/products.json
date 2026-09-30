@@ -1,0 +1,801 @@
+[
+  {
+    "id": "p001",
+    "slug": "redragon-h510-zeus-x-rgb-wireless-headset",
+    "name": "H510 Zeus-X RGB Wireless Headset",
+    "brand": "Redragon",
+    "category": "gaming-headsets",
+    "price": 14500,
+    "comparePrice": 16999,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/headset.svg",
+    "short": "7.1 virtual surround, 2.4G wireless and detachable noise-cancelling mic.",
+    "description": "7.1 virtual surround, 2.4G wireless and detachable noise-cancelling mic. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connectivity": "2.4G Wireless / USB",
+      "Driver": "53 mm",
+      "Battery": "Up to 20 hours",
+      "Surround": "7.1 Virtual",
+      "Lighting": "RGB"
+    }
+  },
+  {
+    "id": "p002",
+    "slug": "fantech-hg11-captain-7-1-gaming-headset",
+    "name": "HG11 Captain 7.1 Gaming Headset",
+    "brand": "Fantech",
+    "category": "gaming-headsets",
+    "price": 6499,
+    "comparePrice": 7499,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/headset.svg",
+    "short": "Lightweight USB headset with 7.1 surround and RGB earcups.",
+    "description": "Lightweight USB headset with 7.1 surround and RGB earcups. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connectivity": "USB",
+      "Driver": "50 mm",
+      "Surround": "7.1 Virtual",
+      "Mic": "Flexible, noise-reducing"
+    }
+  },
+  {
+    "id": "p003",
+    "slug": "logitech-g435-lightspeed-wireless-headset",
+    "name": "G435 Lightspeed Wireless Headset",
+    "brand": "Logitech",
+    "category": "gaming-headsets",
+    "price": 18999,
+    "comparePrice": 21500,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/headset.svg",
+    "short": "Ultra-light 165 g wireless headset for PC, PlayStation and phones.",
+    "description": "Ultra-light 165 g wireless headset for PC, PlayStation and phones. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connectivity": "Lightspeed + Bluetooth",
+      "Weight": "165 g",
+      "Battery": "Up to 18 hours",
+      "Mic": "Dual beamforming"
+    }
+  },
+  {
+    "id": "p004",
+    "slug": "razer-kraken-x-lite-gaming-headset",
+    "name": "Kraken X Lite Gaming Headset",
+    "brand": "Razer",
+    "category": "gaming-headsets",
+    "price": 9999,
+    "comparePrice": 11999,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/headset.svg",
+    "short": "3.5 mm headset that works on PC, console and mobile.",
+    "description": "3.5 mm headset that works on PC, console and mobile. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connectivity": "3.5 mm jack",
+      "Driver": "40 mm",
+      "Weight": "230 g",
+      "Compatibility": "PC, PS, Xbox, Switch, Mobile"
+    }
+  },
+  {
+    "id": "p005",
+    "slug": "nomi-audio-airdots-pro-anc-earbuds",
+    "name": "Airdots Pro ANC Earbuds",
+    "brand": "Nomi Audio",
+    "category": "earbuds",
+    "price": 4999,
+    "comparePrice": 6499,
+    "inStock": true,
+    "featured": true,
+    "isNew": true,
+    "image": "/img/products/earbuds.svg",
+    "short": "Active noise cancellation, transparency mode and 30-hour battery.",
+    "description": "Active noise cancellation, transparency mode and 30-hour battery. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Bluetooth": "5.3",
+      "ANC": "Up to 35 dB",
+      "Battery": "30 hours with case",
+      "Latency": "60 ms game mode",
+      "Water": "IPX5"
+    }
+  },
+  {
+    "id": "p006",
+    "slug": "haylou-airbuds-x2-gaming-earbuds",
+    "name": "Airbuds X2 Gaming Earbuds",
+    "brand": "Haylou",
+    "category": "earbuds",
+    "price": 3499,
+    "comparePrice": 4299,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/earbuds.svg",
+    "short": "Low-latency game mode with bass-boost drivers.",
+    "description": "Low-latency game mode with bass-boost drivers. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Bluetooth": "5.3",
+      "Battery": "24 hours with case",
+      "Latency": "65 ms",
+      "Water": "IPX4"
+    }
+  },
+  {
+    "id": "p007",
+    "slug": "qcy-t13-anc-true-wireless-earbuds",
+    "name": "T13 ANC True Wireless Earbuds",
+    "brand": "QCY",
+    "category": "earbuds",
+    "price": 3999,
+    "comparePrice": 4999,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/earbuds.svg",
+    "short": "Hybrid ANC with four mics for clear calls.",
+    "description": "Hybrid ANC with four mics for clear calls. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Bluetooth": "5.3",
+      "ANC": "Hybrid",
+      "Battery": "30 hours with case",
+      "Mics": "4"
+    }
+  },
+  {
+    "id": "p008",
+    "slug": "audionic-airo-2-wireless-earbuds",
+    "name": "Airo 2 Wireless Earbuds",
+    "brand": "Audionic",
+    "category": "earbuds",
+    "price": 2799,
+    "comparePrice": 3499,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/earbuds.svg",
+    "short": "Everyday earbuds with touch controls and deep bass.",
+    "description": "Everyday earbuds with touch controls and deep bass. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Bluetooth": "5.1",
+      "Battery": "20 hours with case",
+      "Controls": "Touch"
+    }
+  },
+  {
+    "id": "p009",
+    "slug": "baseus-buds-lite-tws-earbuds",
+    "name": "Buds Lite TWS Earbuds",
+    "brand": "Baseus",
+    "category": "earbuds",
+    "price": 3299,
+    "comparePrice": 3999,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/earbuds.svg",
+    "short": "Compact case, quick pairing and balanced sound.",
+    "description": "Compact case, quick pairing and balanced sound. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Bluetooth": "5.3",
+      "Battery": "25 hours with case",
+      "Charging": "Type-C"
+    }
+  },
+  {
+    "id": "p010",
+    "slug": "nomi-audio-bass-pro-handsfree-with-mic",
+    "name": "Bass Pro Handsfree with Mic",
+    "brand": "Nomi Audio",
+    "category": "handsfree",
+    "price": 799,
+    "comparePrice": 1099,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/handsfree.svg",
+    "short": "Punchy bass, tangle-free cable and in-line mic.",
+    "description": "Punchy bass, tangle-free cable and in-line mic. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connector": "3.5 mm",
+      "Cable": "1.2 m tangle-free",
+      "Mic": "In-line with button"
+    }
+  },
+  {
+    "id": "p011",
+    "slug": "baseus-type-c-digital-handsfree",
+    "name": "Type-C Digital Handsfree",
+    "brand": "Baseus",
+    "category": "handsfree",
+    "price": 1299,
+    "comparePrice": 1599,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/handsfree.svg",
+    "short": "Digital DAC earphones for phones without a headphone jack.",
+    "description": "Digital DAC earphones for phones without a headphone jack. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connector": "USB Type-C",
+      "DAC": "Built-in",
+      "Mic": "In-line with volume"
+    }
+  },
+  {
+    "id": "p012",
+    "slug": "fantech-gaming-in-ear-dual-mic-handsfree",
+    "name": "Gaming In-Ear Dual Mic Handsfree",
+    "brand": "Fantech",
+    "category": "handsfree",
+    "price": 1499,
+    "comparePrice": 1899,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/handsfree.svg",
+    "short": "Detachable boom mic for PUBG and Free Fire voice chat.",
+    "description": "Detachable boom mic for PUBG and Free Fire voice chat. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connector": "3.5 mm",
+      "Mic": "Detachable boom + in-line",
+      "Driver": "10 mm"
+    }
+  },
+  {
+    "id": "p013",
+    "slug": "audionic-classic-metal-handsfree",
+    "name": "Classic Metal Handsfree",
+    "brand": "Audionic",
+    "category": "handsfree",
+    "price": 999,
+    "comparePrice": 1299,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/handsfree.svg",
+    "short": "Aluminium housing with clear vocals and rich bass.",
+    "description": "Aluminium housing with clear vocals and rich bass. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connector": "3.5 mm",
+      "Housing": "Aluminium",
+      "Mic": "In-line"
+    }
+  },
+  {
+    "id": "p014",
+    "slug": "redragon-m711-cobra-rgb-gaming-mouse",
+    "name": "M711 Cobra RGB Gaming Mouse",
+    "brand": "Redragon",
+    "category": "gaming-mice",
+    "price": 2999,
+    "comparePrice": 3599,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/mouse.svg",
+    "short": "10,000 DPI, 7 programmable buttons and Chroma RGB.",
+    "description": "10,000 DPI, 7 programmable buttons and Chroma RGB. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "DPI": "Up to 10,000",
+      "Buttons": "7 programmable",
+      "Polling": "1000 Hz",
+      "Connectivity": "Wired USB"
+    }
+  },
+  {
+    "id": "p015",
+    "slug": "logitech-g502-hero-gaming-mouse",
+    "name": "G502 HERO Gaming Mouse",
+    "brand": "Logitech",
+    "category": "gaming-mice",
+    "price": 10999,
+    "comparePrice": 12999,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/mouse.svg",
+    "short": "HERO 25K sensor with adjustable weights.",
+    "description": "HERO 25K sensor with adjustable weights. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "DPI": "Up to 25,600",
+      "Buttons": "11 programmable",
+      "Weights": "5 x 3.6 g",
+      "Connectivity": "Wired USB"
+    }
+  },
+  {
+    "id": "p016",
+    "slug": "fantech-helios-xd7-wireless-mouse",
+    "name": "Helios XD7 Wireless Mouse",
+    "brand": "Fantech",
+    "category": "gaming-mice",
+    "price": 7499,
+    "comparePrice": 8499,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/mouse.svg",
+    "short": "Ultra-light 59 g wireless mouse with PixArt 3395.",
+    "description": "Ultra-light 59 g wireless mouse with PixArt 3395. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "DPI": "Up to 26,000",
+      "Weight": "59 g",
+      "Connectivity": "2.4G / Bluetooth / Wired",
+      "Battery": "Up to 70 hours"
+    }
+  },
+  {
+    "id": "p017",
+    "slug": "redragon-k552-kumara-mechanical-keyboard",
+    "name": "K552 Kumara Mechanical Keyboard",
+    "brand": "Redragon",
+    "category": "keyboards",
+    "price": 7999,
+    "comparePrice": 9499,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/keyboard.svg",
+    "short": "TKL mechanical keyboard with red switches and RGB.",
+    "description": "TKL mechanical keyboard with red switches and RGB. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Layout": "TKL 87 keys",
+      "Switches": "Outemu Red",
+      "Lighting": "RGB",
+      "Build": "Metal top plate"
+    }
+  },
+  {
+    "id": "p018",
+    "slug": "fantech-mk857-maxfit-65-keyboard",
+    "name": "MK857 Maxfit 65% Keyboard",
+    "brand": "Fantech",
+    "category": "keyboards",
+    "price": 8999,
+    "comparePrice": 10499,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/keyboard.svg",
+    "short": "Hot-swappable compact keyboard with tri-mode connection.",
+    "description": "Hot-swappable compact keyboard with tri-mode connection. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Layout": "65% 68 keys",
+      "Switches": "Hot-swap",
+      "Connectivity": "Wired / 2.4G / Bluetooth",
+      "Lighting": "RGB"
+    }
+  },
+  {
+    "id": "p019",
+    "slug": "logitech-g213-prodigy-rgb-keyboard",
+    "name": "G213 Prodigy RGB Keyboard",
+    "brand": "Logitech",
+    "category": "keyboards",
+    "price": 11499,
+    "comparePrice": 12999,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/keyboard.svg",
+    "short": "Full-size spill-resistant keyboard with media controls.",
+    "description": "Full-size spill-resistant keyboard with media controls. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Layout": "Full size",
+      "Switches": "Mech-Dome",
+      "Lighting": "RGB 5 zones",
+      "Extras": "Media controls, spill-resistant"
+    }
+  },
+  {
+    "id": "p020",
+    "slug": "sony-dualsense-wireless-controller",
+    "name": "DualSense Wireless Controller",
+    "brand": "Sony",
+    "category": "controllers",
+    "price": 17999,
+    "comparePrice": 19999,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/controller.svg",
+    "short": "Haptic feedback and adaptive triggers for PS5.",
+    "description": "Haptic feedback and adaptive triggers for PS5. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Platform": "PS5 / PC",
+      "Connectivity": "Bluetooth / USB-C",
+      "Features": "Haptics, adaptive triggers, built-in mic"
+    }
+  },
+  {
+    "id": "p021",
+    "slug": "microsoft-xbox-wireless-controller",
+    "name": "Xbox Wireless Controller",
+    "brand": "Microsoft",
+    "category": "controllers",
+    "price": 16499,
+    "comparePrice": 18499,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/controller.svg",
+    "short": "Textured grip and hybrid D-pad for Xbox and PC.",
+    "description": "Textured grip and hybrid D-pad for Xbox and PC. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Platform": "Xbox Series X|S / PC / Mobile",
+      "Connectivity": "Xbox Wireless / Bluetooth",
+      "Battery": "2 x AA"
+    }
+  },
+  {
+    "id": "p022",
+    "slug": "fantech-eos-pro-wireless-gamepad",
+    "name": "EOS Pro Wireless Gamepad",
+    "brand": "Fantech",
+    "category": "controllers",
+    "price": 5499,
+    "comparePrice": 6499,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/controller.svg",
+    "short": "Hall-effect sticks, tri-mode connectivity, PC and Switch ready.",
+    "description": "Hall-effect sticks, tri-mode connectivity, PC and Switch ready. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Platform": "PC / Switch / Android",
+      "Connectivity": "2.4G / Bluetooth / Wired",
+      "Sticks": "Hall effect"
+    }
+  },
+  {
+    "id": "p023",
+    "slug": "nomi-gear-mobile-trigger-controller",
+    "name": "Mobile Trigger Controller",
+    "brand": "Nomi Gear",
+    "category": "controllers",
+    "price": 1499,
+    "comparePrice": 1999,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/controller.svg",
+    "short": "Clip-on triggers with cooling fan for PUBG Mobile.",
+    "description": "Clip-on triggers with cooling fan for PUBG Mobile. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Compatibility": "Phones 4.7–6.9 in",
+      "Cooling": "Built-in fan",
+      "Power": "Type-C"
+    }
+  },
+  {
+    "id": "p024",
+    "slug": "sony-playstation-5-slim-digital-edition",
+    "name": "PlayStation 5 Slim Digital Edition",
+    "brand": "Sony",
+    "category": "consoles",
+    "price": 149999,
+    "comparePrice": 164999,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/console.svg",
+    "short": "Lightning-fast SSD, 4K gaming and DualSense included.",
+    "description": "Lightning-fast SSD, 4K gaming and DualSense included. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Storage": "1 TB SSD",
+      "Resolution": "Up to 4K 120 Hz",
+      "In the box": "Console, DualSense, cables"
+    }
+  },
+  {
+    "id": "p025",
+    "slug": "microsoft-xbox-series-s-512gb",
+    "name": "Xbox Series S 512GB",
+    "brand": "Microsoft",
+    "category": "consoles",
+    "price": 99999,
+    "comparePrice": 109999,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/console.svg",
+    "short": "Compact all-digital next-gen console.",
+    "description": "Compact all-digital next-gen console. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Storage": "512 GB SSD",
+      "Resolution": "Up to 1440p 120 Hz",
+      "In the box": "Console, controller, HDMI"
+    }
+  },
+  {
+    "id": "p026",
+    "slug": "nintendo-nintendo-switch-oled",
+    "name": "Nintendo Switch OLED",
+    "brand": "Nintendo",
+    "category": "consoles",
+    "price": 109999,
+    "comparePrice": 119999,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/console.svg",
+    "short": "7-inch OLED screen, handheld or docked.",
+    "description": "7-inch OLED screen, handheld or docked. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Screen": "7 in OLED",
+      "Storage": "64 GB",
+      "Modes": "TV, tabletop, handheld"
+    }
+  },
+  {
+    "id": "p027",
+    "slug": "jbl-flip-6-portable-speaker",
+    "name": "Flip 6 Portable Speaker",
+    "brand": "JBL",
+    "category": "speakers",
+    "price": 24999,
+    "comparePrice": 27999,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/speaker.svg",
+    "short": "Bold JBL Pro sound, IP67 waterproof, 12-hour battery.",
+    "description": "Bold JBL Pro sound, IP67 waterproof, 12-hour battery. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Bluetooth": "5.1",
+      "Battery": "12 hours",
+      "Water": "IP67",
+      "Output": "30 W"
+    }
+  },
+  {
+    "id": "p028",
+    "slug": "nomi-audio-sound-blast-mini-speaker",
+    "name": "Sound Blast Mini Speaker",
+    "brand": "Nomi Audio",
+    "category": "speakers",
+    "price": 3999,
+    "comparePrice": 4999,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/speaker.svg",
+    "short": "Pocket-size speaker with RGB and TWS pairing.",
+    "description": "Pocket-size speaker with RGB and TWS pairing. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Bluetooth": "5.3",
+      "Battery": "8 hours",
+      "Output": "10 W",
+      "Extras": "TWS pairing, RGB"
+    }
+  },
+  {
+    "id": "p029",
+    "slug": "audionic-solo-7-wireless-speaker",
+    "name": "Solo 7 Wireless Speaker",
+    "brand": "Audionic",
+    "category": "speakers",
+    "price": 6499,
+    "comparePrice": 7499,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/speaker.svg",
+    "short": "Rich stereo sound with FM, USB and TF card support.",
+    "description": "Rich stereo sound with FM, USB and TF card support. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Bluetooth": "5.0",
+      "Battery": "10 hours",
+      "Inputs": "USB, TF, AUX, FM"
+    }
+  },
+  {
+    "id": "p030",
+    "slug": "nomi-gear-watch-ultra-smart-watch",
+    "name": "Watch Ultra Smart Watch",
+    "brand": "Nomi Gear",
+    "category": "smart-watches",
+    "price": 5999,
+    "comparePrice": 7499,
+    "inStock": true,
+    "featured": true,
+    "isNew": true,
+    "image": "/img/products/watch.svg",
+    "short": "2.0-inch AMOLED, Bluetooth calling and 100+ sport modes.",
+    "description": "2.0-inch AMOLED, Bluetooth calling and 100+ sport modes. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Display": "2.0 in AMOLED",
+      "Calling": "Bluetooth",
+      "Battery": "Up to 7 days",
+      "Water": "IP68"
+    }
+  },
+  {
+    "id": "p031",
+    "slug": "haylou-solar-plus-rt3-smart-watch",
+    "name": "Solar Plus RT3 Smart Watch",
+    "brand": "Haylou",
+    "category": "smart-watches",
+    "price": 8499,
+    "comparePrice": 9999,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/watch.svg",
+    "short": "Round AMOLED display with SpO2 and heart-rate tracking.",
+    "description": "Round AMOLED display with SpO2 and heart-rate tracking. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Display": "1.43 in AMOLED",
+      "Health": "Heart rate, SpO2, sleep",
+      "Battery": "Up to 10 days"
+    }
+  },
+  {
+    "id": "p032",
+    "slug": "baseus-20000mah-22-5w-power-bank",
+    "name": "20000mAh 22.5W Power Bank",
+    "brand": "Baseus",
+    "category": "power-banks",
+    "price": 5499,
+    "comparePrice": 6499,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/powerbank.svg",
+    "short": "Charge three devices at once with fast charging.",
+    "description": "Charge three devices at once with fast charging. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Capacity": "20,000 mAh",
+      "Output": "22.5 W",
+      "Ports": "USB-C, 2 x USB-A",
+      "Display": "Digital"
+    }
+  },
+  {
+    "id": "p033",
+    "slug": "anker-powercore-10000mah-slim",
+    "name": "PowerCore 10000mAh Slim",
+    "brand": "Anker",
+    "category": "power-banks",
+    "price": 4999,
+    "comparePrice": 5799,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/powerbank.svg",
+    "short": "Slim, pocket-friendly power bank with PowerIQ.",
+    "description": "Slim, pocket-friendly power bank with PowerIQ. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Capacity": "10,000 mAh",
+      "Output": "12 W",
+      "Weight": "180 g"
+    }
+  },
+  {
+    "id": "p034",
+    "slug": "baseus-65w-gan-fast-charger",
+    "name": "65W GaN Fast Charger",
+    "brand": "Baseus",
+    "category": "chargers-cables",
+    "price": 5999,
+    "comparePrice": 6999,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/charger.svg",
+    "short": "Compact GaN charger for laptop, phone and tablet.",
+    "description": "Compact GaN charger for laptop, phone and tablet. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Output": "65 W",
+      "Ports": "2 x USB-C, 1 x USB-A",
+      "Tech": "GaN, PD, QC"
+    }
+  },
+  {
+    "id": "p035",
+    "slug": "anker-usb-c-to-usb-c-braided-cable-100w",
+    "name": "USB-C to USB-C Braided Cable 100W",
+    "brand": "Anker",
+    "category": "chargers-cables",
+    "price": 1499,
+    "comparePrice": 1899,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/charger.svg",
+    "short": "Nylon-braided 1.8 m cable rated for 100 W.",
+    "description": "Nylon-braided 1.8 m cable rated for 100 W. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Length": "1.8 m",
+      "Power": "100 W",
+      "Build": "Nylon braided"
+    }
+  },
+  {
+    "id": "p036",
+    "slug": "nomi-gear-20w-usb-c-pd-charger",
+    "name": "20W USB-C PD Charger",
+    "brand": "Nomi Gear",
+    "category": "chargers-cables",
+    "price": 1799,
+    "comparePrice": 2299,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/charger.svg",
+    "short": "Fast charge iPhone and Android safely.",
+    "description": "Fast charge iPhone and Android safely. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Output": "20 W",
+      "Port": "USB-C PD",
+      "Safety": "Over-heat and surge protection"
+    }
+  },
+  {
+    "id": "p037",
+    "slug": "redragon-xl-rgb-gaming-mouse-pad",
+    "name": "XL RGB Gaming Mouse Pad",
+    "brand": "Redragon",
+    "category": "accessories",
+    "price": 2499,
+    "comparePrice": 2999,
+    "inStock": true,
+    "featured": true,
+    "isNew": false,
+    "image": "/img/products/accessory.svg",
+    "short": "800 x 300 mm desk mat with edge RGB lighting.",
+    "description": "800 x 300 mm desk mat with edge RGB lighting. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Size": "800 x 300 x 4 mm",
+      "Surface": "Micro-weave cloth",
+      "Lighting": "RGB edge"
+    }
+  },
+  {
+    "id": "p038",
+    "slug": "fantech-usb-condenser-streaming-mic",
+    "name": "USB Condenser Streaming Mic",
+    "brand": "Fantech",
+    "category": "accessories",
+    "price": 6999,
+    "comparePrice": 7999,
+    "inStock": true,
+    "featured": false,
+    "isNew": true,
+    "image": "/img/products/accessory.svg",
+    "short": "Plug-and-play mic with pop filter and stand.",
+    "description": "Plug-and-play mic with pop filter and stand. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Connectivity": "USB",
+      "Pattern": "Cardioid",
+      "Extras": "Pop filter, tripod stand"
+    }
+  },
+  {
+    "id": "p039",
+    "slug": "nomi-gear-headphone-stand-with-rgb",
+    "name": "Headphone Stand with RGB",
+    "brand": "Nomi Gear",
+    "category": "accessories",
+    "price": 1999,
+    "comparePrice": 2499,
+    "inStock": true,
+    "featured": false,
+    "isNew": false,
+    "image": "/img/products/accessory.svg",
+    "short": "Aluminium stand with RGB base and 2 USB ports.",
+    "description": "Aluminium stand with RGB base and 2 USB ports. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
+    "specs": {
+      "Build": "Aluminium",
+      "Lighting": "RGB",
+      "Ports": "2 x USB"
+    }
+  }
+]

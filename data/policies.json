@@ -1,0 +1,42 @@
+{
+  "shipping": {
+    "title": "Shipping & Delivery",
+    "intro": "We deliver to every city in Pakistan through trusted courier partners.",
+    "sections": [
+      { "h": "Delivery time", "p": "Orders are dispatched within 24 hours on working days. Major cities usually receive parcels in 2–3 working days, and other areas in 3–5 working days." },
+      { "h": "Delivery charges", "p": "A flat delivery charge of Rs 250 applies to orders below Rs 10,000. Orders of Rs 10,000 or more ship free." },
+      { "h": "Cash on delivery", "p": "Pay in cash when your parcel arrives. Advance payment by bank transfer or mobile wallet is also available on request over WhatsApp." },
+      { "h": "Order confirmation", "p": "After you place an order, our team confirms it on WhatsApp or by phone before dispatch. Please keep your phone reachable." }
+    ]
+  },
+  "returns": {
+    "title": "Returns & Warranty",
+    "intro": "Shop with confidence. If something is not right, we will make it right.",
+    "sections": [
+      { "h": "7-day checking warranty", "p": "If a product arrives faulty or damaged, contact us within 7 days of delivery for a free replacement." },
+      { "h": "Brand warranty", "p": "Products that carry an official brand warranty are covered for the period listed on the product page." },
+      { "h": "How to claim", "p": "Send your order number, a short video of the issue and photos of the packaging to us on WhatsApp. We will guide you through the next steps." },
+      { "h": "Not covered", "p": "Physical damage, water damage (unless the product is rated for it), and missing accessories or packaging are not covered." }
+    ]
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "Your privacy matters to us.",
+    "sections": [
+      { "h": "What we collect", "p": "We collect only what we need to deliver your order: your name, phone number, email, city and address." },
+      { "h": "How we use it", "p": "Your details are used to confirm, dispatch and support your order. We never sell your information." },
+      { "h": "Sharing", "p": "We share your delivery details only with our courier partner for the purpose of delivering your parcel." },
+      { "h": "Contact", "p": "For any privacy request, email info@gamingbynomi.store." }
+    ]
+  },
+  "terms": {
+    "title": "Terms & Conditions",
+    "intro": "By using this website and placing an order, you agree to these terms.",
+    "sections": [
+      { "h": "Prices", "p": "All prices are in Pakistani Rupees and may change without notice. The price at the time of order confirmation applies." },
+      { "h": "Availability", "p": "Stock is limited. If an item becomes unavailable after you order, we will contact you with options or a full refund of any advance paid." },
+      { "h": "Product images", "p": "Images are for illustration. Colours and packaging may vary slightly from the photos." },
+      { "h": "Order cancellation", "p": "You can cancel your order free of charge before it is dispatched by messaging us on WhatsApp." }
+    ]
+  }
+}

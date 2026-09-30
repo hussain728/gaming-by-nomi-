@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+
+<section class="section">
+  <div class="container narrow success">
+    <div class="success__icon reveal"><svg class="i i-lg"><use href="#i-check"/></svg></div>
+    <h1 class="reveal">Thank you, <%= order.customer.name.split(' ')[0] %>.</h1>
+    <p class="lead reveal">Your order <b><%= order.id %></b> has been placed. We will confirm it on WhatsApp or by phone shortly.</p>
+
+    <div class="summary reveal">
+      <% order.items.forEach(function (i) { %>
+        <div class="summary__row"><span><%= i.name %> × <%= i.qty %></span><span><%= money(i.price * i.qty) %></span></div>
+      <% }) %>
+      <div class="summary__row"><span>Delivery</span><span><%= order.shipping ? money(order.shipping) : 'Free' %></span></div>
+      <div class="summary__row summary__total"><span>Total (Cash on Delivery)</span><span><%= money(order.total) %></span></div>
+    </div>
+
+    <div class="hero__cta hero__cta--center reveal">
+      <a href="<%= waLink('Hi! I just placed order ' + order.id + ' for ' + money(order.total) + '. Please confirm.') %>" class="btn btn--wa btn--lg" target="_blank" rel="noopener">
+        <svg class="i"><use href="#i-whatsapp"/></svg> Confirm on WhatsApp
+      </a>
+      <a href="/shop" class="btn btn--link btn--lg">Continue shopping</a>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

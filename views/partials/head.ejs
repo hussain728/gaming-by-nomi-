@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title><%= pageTitle ? pageTitle + ' | ' + config.storeName : config.storeName %></title>
+  <meta name="description" content="<%= metaDescription %>">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:title" content="<%= pageTitle || config.storeName %>">
+  <meta property="og:description" content="<%= metaDescription %>">
+  <meta property="og:site_name" content="<%= config.storeName %>">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<%- include('icons') %>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a class="brand" href="/" aria-label="<%= config.storeName %> home">
+      <img src="/img/logo.svg" alt="" width="34" height="34">
+      <span>Gaming <b>by Nomi</b></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Main">
+      <a href="/shop" class="<%= path === '/shop' ? 'is-active' : '' %>">Shop</a>
+      <div class="nav__dropdown">
+        <button type="button" class="nav__dropdown-btn" aria-expanded="false">Categories
+          <svg class="i i-sm"><use href="#i-chevron"/></svg>
+        </button>
+        <div class="mega">
+          <div class="mega__grid container">
+            <% categories.forEach(function (c) { %>
+              <a class="mega__item" href="/shop?category=<%= c.slug %>">
+                <img src="/img/products/<%= c.icon %>.svg" alt="" loading="lazy">
+                <span><%= c.name %></span>
+              </a>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+      <a href="/shop?category=consoles">Consoles</a>
+      <a href="/shop?sale=1">Deals</a>
+      <a href="/about" class="<%= path === '/about' ? 'is-active' : '' %>">About</a>
+      <a href="/contact" class="<%= path === '/contact' ? 'is-active' : '' %>">Contact</a>
+    </nav>
+
+    <div class="nav__actions">
+      <button type="button" class="icon-btn" data-search-open aria-label="Search">
+        <svg class="i"><use href="#i-search"/></svg>
+      </button>
+      <a href="/cart" class="icon-btn bag" aria-label="Shopping bag">
+        <svg class="i"><use href="#i-bag"/></svg>
+        <span class="bag__count" data-cart-count hidden>0</span>
+      </a>
+      <button type="button" class="icon-btn nav__burger" data-menu-toggle aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="search-panel" data-search-panel hidden>
+    <form class="container search-panel__form" action="/shop" method="get" role="search">
+      <svg class="i"><use href="#i-search"/></svg>
+      <input type="search" name="q" placeholder="Search earbuds, headsets, controllers…" aria-label="Search products" autocomplete="off">
+      <button type="button" class="icon-btn" data-search-close aria-label="Close search"><svg class="i"><use href="#i-close"/></svg></button>
+    </form>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu aria-hidden="true">
+  <nav class="mobile-menu__inner container" aria-label="Mobile">
+    <a href="/shop">Shop All</a>
+    <% categories.forEach(function (c) { %>
+      <a href="/shop?category=<%= c.slug %>" class="mobile-menu__sub"><%= c.name %></a>
+    <% }) %>
+    <a href="/shop?sale=1">Deals</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+    <a href="<%= waLink('Hi Gaming by Nomi!') %>" class="btn btn--primary mobile-menu__cta" target="_blank" rel="noopener">
+      <svg class="i"><use href="#i-whatsapp"/></svg> Chat on WhatsApp
+    </a>
+  </nav>
+</div>
+
+<main id="main">

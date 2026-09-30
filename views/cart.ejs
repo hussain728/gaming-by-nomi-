@@ -1,0 +1,26 @@
+<%- include('partials/head') %>
+
+<section class="page-head page-head--sm">
+  <div class="container"><h1 class="reveal">Your bag.</h1></div>
+</section>
+
+<section class="section section--flush">
+  <div class="container">
+    <div class="checkout" data-cart-page>
+      <div class="cart-lines" data-cart-lines>
+        <p class="muted">Loading your bag…</p>
+      </div>
+      <aside class="summary" data-cart-summary hidden>
+        <h2>Summary</h2>
+        <div class="summary__row"><span>Subtotal</span><span data-sum-subtotal></span></div>
+        <div class="summary__row"><span>Delivery</span><span data-sum-shipping></span></div>
+        <p class="summary__hint" data-sum-hint></p>
+        <div class="summary__row summary__total"><span>Total</span><span data-sum-total></span></div>
+        <a href="/checkout" class="btn btn--primary btn--lg btn--block">Checkout</a>
+        <a href="/shop" class="btn btn--link btn--block">Continue shopping</a>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

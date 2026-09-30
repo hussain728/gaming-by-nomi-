@@ -1,0 +1,10 @@
+<%- include('_head', { hideNav: true }) %>
+<div class="container narrow-sm">
+  <form class="form admin-login" method="post" action="/admin/login">
+    <h1>Admin login</h1>
+    <% if (error) { %><p class="form__error"><%= error %></p><% } %>
+    <label class="field"><span>Password</span><input type="password" name="password" required autofocus autocomplete="current-password"></label>
+    <button class="btn btn--primary btn--lg btn--block">Log in</button>
+  </form>
+</div>
+</main></body></html>

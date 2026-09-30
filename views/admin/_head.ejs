@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title><%= pageTitle %> | Admin · <%= config.storeName %></title>
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="admin">
+<%- include('../partials/icons') %>
+<header class="admin-bar">
+  <div class="container admin-bar__inner">
+    <a class="brand" href="/admin"><img src="/img/logo.svg" alt="" width="30" height="30"><span>Nomi <b>Admin</b></span></a>
+    <% if (typeof hideNav === 'undefined') { %>
+      <nav>
+        <a href="/admin#orders">Orders</a>
+        <a href="/admin#products">Products</a>
+        <a href="/admin#messages">Messages</a>
+        <a href="/" target="_blank">View store</a>
+        <form method="post" action="/admin/logout"><button class="btn btn--outline btn--sm">Log out</button></form>
+      </nav>
+    <% } %>
+  </div>
+</header>
+<main class="admin-main">

@@ -1,0 +1,52 @@
+<%- include('_head') %>
+<% var p = product || { inStock: true, specs: {} }; %>
+<div class="container narrow">
+  <a href="/admin#products" class="btn btn--link">&larr; Back to products</a>
+  <form class="form" method="post" action="/admin/products/save" enctype="multipart/form-data">
+    <h1><%= product && product.id ? 'Edit product' : 'Add product' %></h1>
+    <% if (error) { %><p class="form__error"><%= error %></p><% } %>
+    <input type="hidden" name="id" value="<%= p.id || '' %>">
+    <input type="hidden" name="image" value="<%= p.image || '' %>">
+
+    <label class="field"><span>Product name *</span><input name="name" required maxlength="140" value="<%= p.name || '' %>"></label>
+    <div class="form__row">
+      <label class="field"><span>Brand</span><input name="brand" maxlength="60" value="<%= p.brand || '' %>"></label>
+      <label class="field"><span>Category *</span>
+        <select name="category" required>
+          <% categories.forEach(function (c) { %>
+            <option value="<%= c.slug %>" <%= p.category === c.slug ? 'selected' : '' %>><%= c.name %></option>
+          <% }) %>
+        </select>
+      </label>
+    </div>
+    <div class="form__row">
+      <label class="field"><span>Price (Rs) *</span><input name="price" type="number" min="0" required value="<%= p.price || '' %>"></label>
+      <label class="field"><span>Old price (Rs) — shows discount</span><input name="comparePrice" type="number" min="0" value="<%= p.comparePrice || '' %>"></label>
+    </div>
+
+    <div class="field">
+      <span>Product image</span>
+      <div class="upload">
+        <% if (p.image) { %><img src="<%= p.image %>" alt="" class="thumb thumb--lg"><% } %>
+        <input type="file" name="imageFile" accept="image/jpeg,image/png,image/webp,image/gif">
+      </div>
+      <small class="muted">JPG, PNG or WEBP up to 5 MB. Square images with a white background look best.</small>
+    </div>
+
+    <label class="field"><span>Short description (shown under the title)</span><input name="short" maxlength="200" value="<%= p.short || '' %>"></label>
+    <label class="field"><span>Full description</span><textarea name="description" rows="5" maxlength="5000"><%= p.description || '' %></textarea></label>
+    <label class="field"><span>Specifications — one per line, like <code>Battery: 20 hours</code></span>
+      <textarea name="specs" rows="6"><% Object.keys(p.specs || {}).forEach(function (k) { %><%= k %>: <%= p.specs[k] %>
+<% }) %></textarea>
+    </label>
+
+    <div class="checks">
+      <label><input type="checkbox" name="inStock" <%= p.inStock ? 'checked' : '' %>> In stock</label>
+      <label><input type="checkbox" name="featured" <%= p.featured ? 'checked' : '' %>> Featured on home page</label>
+      <label><input type="checkbox" name="isNew" <%= p.isNew ? 'checked' : '' %>> New arrival</label>
+    </div>
+
+    <button class="btn btn--primary btn--lg btn--block">Save product</button>
+  </form>
+</div>
+</main></body></html>

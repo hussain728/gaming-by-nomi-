@@ -1,0 +1,20 @@
+<%- include('partials/head') %>
+
+<section class="page-head">
+  <div class="container narrow">
+    <p class="eyebrow reveal">Help</p>
+    <h1 class="reveal"><%= page.title %></h1>
+    <p class="page-head__lead reveal"><%= page.intro %></p>
+  </div>
+</section>
+
+<section class="section section--flush">
+  <div class="container narrow prose">
+    <% page.sections.forEach(function (s) { %>
+      <div class="reveal"><h2><%= s.h %></h2><p><%= s.p %></p></div>
+    <% }) %>
+    <p class="muted reveal">Still have a question? <a href="<%= waLink() %>" target="_blank" rel="noopener">Message us on WhatsApp</a> or email <a href="mailto:<%= config.email %>"><%= config.email %></a>.</p>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,23 @@
+<article class="card reveal">
+  <a class="card__media" href="/product/<%= p.slug %>" aria-label="<%= p.name %>">
+    <% if (discount(p)) { %><span class="badge badge--sale">-<%= discount(p) %>%</span><% } else if (p.isNew) { %><span class="badge">New</span><% } %>
+    <img src="<%= p.image %>" alt="<%= p.name %>" loading="lazy">
+  </a>
+  <div class="card__body">
+    <span class="card__brand"><%= p.brand %></span>
+    <h3 class="card__title"><a href="/product/<%= p.slug %>"><%= p.name %></a></h3>
+    <div class="card__foot">
+      <div class="price">
+        <span class="price__now"><%= money(p.price) %></span>
+        <% if (discount(p)) { %><s class="price__was"><%= money(p.comparePrice) %></s><% } %>
+      </div>
+      <% if (p.inStock) { %>
+        <button type="button" class="card__add" data-add-to-cart="<%= p.id %>" data-name="<%= p.name %>" aria-label="Add <%= p.name %> to bag">
+          <svg class="i"><use href="#i-plus"/></svg>
+        </button>
+      <% } else { %>
+        <span class="card__oos">Sold out</span>
+      <% } %>
+    </div>
+  </div>
+</article>

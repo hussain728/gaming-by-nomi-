@@ -1,0 +1,156 @@
+<%- include('partials/head') %>
+
+<section class="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow reveal">Gaming by Nomi</p>
+      <h1 class="hero__title reveal">Play louder.<br><span class="grad">Win sharper.</span></h1>
+      <p class="hero__lead reveal">Gaming headsets, earbuds, handsfree, controllers and consoles — genuine gear, delivered to your door anywhere in Pakistan.</p>
+      <div class="hero__cta reveal">
+        <a href="/shop" class="btn btn--primary btn--lg">Shop now</a>
+        <a href="/shop?sale=1" class="btn btn--link btn--lg">View deals <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+    <div class="hero__visual reveal">
+      <div class="hero__orbit" aria-hidden="true"></div>
+      <img src="/img/products/headset.svg" alt="Wireless gaming headset" class="hero__img" width="520" height="520">
+      <% if (heroProduct) { %>
+        <a href="/product/<%= heroProduct.slug %>" class="hero__chip">
+          <span><%= heroProduct.brand %> <%= heroProduct.name.split(' ').slice(0, 2).join(' ') %></span>
+          <b><%= money(heroProduct.price) %></b>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<section class="ticker" aria-label="Store benefits">
+  <div class="ticker__track">
+    <% for (var r = 0; r < 2; r++) { %>
+      <span><svg class="i i-sm"><use href="#i-truck"/></svg> Free delivery over <%= money(config.freeShippingOver) %></span>
+      <span><svg class="i i-sm"><use href="#i-cash"/></svg> Cash on delivery nationwide</span>
+      <span><svg class="i i-sm"><use href="#i-shield"/></svg> 7-day checking warranty</span>
+      <span><svg class="i i-sm"><use href="#i-check"/></svg> 100% genuine products</span>
+      <span><svg class="i i-sm"><use href="#i-whatsapp"/></svg> Order support on WhatsApp</span>
+    <% } %>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head reveal">
+      <h2>Shop by category.</h2>
+      <a href="/shop" class="btn btn--link">All products <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="cats">
+      <% categories.forEach(function (c, i) { %>
+        <a href="/shop?category=<%= c.slug %>" class="cat reveal<%= i < 2 ? ' cat--big' : '' %><%= i >= 10 ? ' cat--wide' : '' %>" style="--d:<%= i * 40 %>ms">
+          <div class="cat__text">
+            <h3><%= c.name %></h3>
+            <% if (i < 2) { %><p><%= c.blurb %></p><% } %>
+            <span class="cat__more">Shop <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
+          </div>
+          <img src="/img/products/<%= c.icon %>.svg" alt="" loading="lazy">
+        </a>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint">
+  <div class="container">
+    <div class="section__head reveal">
+      <h2>Featured gear.</h2>
+      <a href="/shop?sort=featured" class="btn btn--link">See all <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="grid">
+      <% featured.forEach(function (p) { %><%- include('partials/product-card', { p: p }) %><% }) %>
+    </div>
+  </div>
+</section>
+
+<section class="showcase">
+  <div class="showcase__stars" aria-hidden="true"></div>
+  <div class="container showcase__inner">
+    <p class="eyebrow eyebrow--light reveal">Next-gen consoles</p>
+    <h2 class="showcase__title reveal">Built for the<br>next level.</h2>
+    <p class="showcase__lead reveal">PlayStation 5, Xbox Series and Nintendo Switch — sealed, genuine and ready to ship.</p>
+    <div class="hero__cta reveal">
+      <a href="/shop?category=consoles" class="btn btn--light btn--lg">Explore consoles</a>
+      <a href="/shop?category=controllers" class="btn btn--ghost-light btn--lg">Controllers</a>
+    </div>
+    <img src="/img/products/console.svg" alt="Gaming console" class="showcase__img reveal" loading="lazy">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container duo">
+    <a href="/shop?category=earbuds" class="duo__tile duo__tile--blue reveal">
+      <p class="eyebrow">Wireless Earbuds</p>
+      <h3>All-day sound.<br>Zero wires.</h3>
+      <span class="btn btn--link">Shop earbuds <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
+      <img src="/img/products/earbuds.svg" alt="" loading="lazy">
+    </a>
+    <a href="/shop?category=handsfree" class="duo__tile reveal">
+      <p class="eyebrow">Handsfree</p>
+      <h3>Clear calls.<br>Deep bass.</h3>
+      <span class="btn btn--link">Shop handsfree <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
+      <img src="/img/products/handsfree.svg" alt="" loading="lazy">
+    </a>
+    <a href="/shop?category=smart-watches" class="duo__tile reveal">
+      <p class="eyebrow">Smart Watches</p>
+      <h3>Your day,<br>on your wrist.</h3>
+      <span class="btn btn--link">Shop watches <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
+      <img src="/img/products/watch.svg" alt="" loading="lazy">
+    </a>
+    <a href="/shop?category=gaming-mice" class="duo__tile duo__tile--blue reveal">
+      <p class="eyebrow">Mice &amp; Keyboards</p>
+      <h3>Every click<br>counts.</h3>
+      <span class="btn btn--link">Shop mice <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
+      <img src="/img/products/mouse.svg" alt="" loading="lazy">
+    </a>
+  </div>
+</section>
+
+<% if (newest.length) { %>
+<section class="section section--tint">
+  <div class="container">
+    <div class="section__head reveal">
+      <h2>New arrivals.</h2>
+      <a href="/shop?sort=newest" class="btn btn--link">See all <svg class="i i-sm"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="grid">
+      <% newest.forEach(function (p) { %><%- include('partials/product-card', { p: p }) %><% }) %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<section class="section">
+  <div class="container">
+    <div class="section__head section__head--center reveal">
+      <h2>Why shop with Nomi.</h2>
+    </div>
+    <div class="perks">
+      <div class="perk reveal"><svg class="i i-lg"><use href="#i-shield"/></svg><h3>Genuine products</h3><p>Every item is checked before it ships. No copies, no surprises.</p></div>
+      <div class="perk reveal"><svg class="i i-lg"><use href="#i-truck"/></svg><h3>Fast delivery</h3><p>Dispatched in 24 hours. Delivered in 2–5 working days nationwide.</p></div>
+      <div class="perk reveal"><svg class="i i-lg"><use href="#i-cash"/></svg><h3>Cash on delivery</h3><p>Pay when your parcel arrives. Simple and secure.</p></div>
+      <div class="perk reveal"><svg class="i i-lg"><use href="#i-headset-help"/></svg><h3>Real support</h3><p>Talk to a real person on WhatsApp, before and after you buy.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-band__inner reveal">
+    <div>
+      <h2>Need help choosing?</h2>
+      <p>Message us on WhatsApp and get a recommendation in minutes.</p>
+    </div>
+    <a href="<%= waLink('Hi! I need help choosing a product.') %>" class="btn btn--light btn--lg" target="_blank" rel="noopener">
+      <svg class="i"><use href="#i-whatsapp"/></svg> <%= config.phoneDisplay %>
+    </a>
+  </div>
+</section>
+
+<%- include('partials/footer') %>

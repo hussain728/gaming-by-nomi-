@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2d3957"/><stop offset="1" stop-color="#0f1628"/></linearGradient>
+    <linearGradient id="rgb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00c2ff"/><stop offset=".5" stop-color="#0a66ff"/><stop offset="1" stop-color="#6a5cff"/></linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#46526f"/><stop offset="1" stop-color="#252f48"/></linearGradient>
+  </defs>
+  <ellipse cx="200" cy="300" rx="180" ry="14" fill="#0a66ff" opacity=".1"/>
+  <g transform="translate(20 110)">
+    <rect x="0" y="0" width="360" height="176" rx="18" fill="url(#deck)"/>
+    <rect x="4" y="168" width="352" height="6" rx="3" fill="url(#rgb)" opacity=".9"/>
+    <g fill="url(#key)">
+      <rect x="16" y="16" width="22" height="20" rx="4"/>
+      <rect x="50" y="16" width="22" height="20" rx="4"/><rect x="76" y="16" width="22" height="20" rx="4"/><rect x="102" y="16" width="22" height="20" rx="4"/><rect x="128" y="16" width="22" height="20" rx="4"/>
+      <rect x="160" y="16" width="22" height="20" rx="4"/><rect x="186" y="16" width="22" height="20" rx="4"/><rect x="212" y="16" width="22" height="20" rx="4"/><rect x="238" y="16" width="22" height="20" rx="4"/>
+      <rect x="270" y="16" width="22" height="20" rx="4"/><rect x="296" y="16" width="22" height="20" rx="4"/><rect x="322" y="16" width="22" height="20" rx="4"/>
+    </g>
+    <g fill="url(#key)">
+      <rect x="16" y="46" width="22" height="22" rx="4"/><rect x="42" y="46" width="22" height="22" rx="4"/><rect x="68" y="46" width="22" height="22" rx="4"/><rect x="94" y="46" width="22" height="22" rx="4"/><rect x="120" y="46" width="22" height="22" rx="4"/><rect x="146" y="46" width="22" height="22" rx="4"/><rect x="172" y="46" width="22" height="22" rx="4"/><rect x="198" y="46" width="22" height="22" rx="4"/><rect x="224" y="46" width="22" height="22" rx="4"/><rect x="250" y="46" width="22" height="22" rx="4"/><rect x="276" y="46" width="68" height="22" rx="4"/>
+      <rect x="16" y="72" width="34" height="22" rx="4"/><rect x="54" y="72" width="22" height="22" rx="4"/><rect x="80" y="72" width="22" height="22" rx="4"/><rect x="106" y="72" width="22" height="22" rx="4"/><rect x="132" y="72" width="22" height="22" rx="4"/><rect x="158" y="72" width="22" height="22" rx="4"/><rect x="184" y="72" width="22" height="22" rx="4"/><rect x="210" y="72" width="22" height="22" rx="4"/><rect x="236" y="72" width="22" height="22" rx="4"/><rect x="262" y="72" width="22" height="22" rx="4"/><rect x="288" y="72" width="56" height="22" rx="4"/>
+      <rect x="16" y="98" width="42" height="22" rx="4"/><rect x="62" y="98" width="22" height="22" rx="4"/><rect x="88" y="98" width="22" height="22" rx="4"/><rect x="114" y="98" width="22" height="22" rx="4"/><rect x="140" y="98" width="22" height="22" rx="4"/><rect x="166" y="98" width="22" height="22" rx="4"/><rect x="192" y="98" width="22" height="22" rx="4"/><rect x="218" y="98" width="22" height="22" rx="4"/><rect x="244" y="98" width="22" height="22" rx="4"/><rect x="270" y="98" width="74" height="22" rx="4"/>
+      <rect x="16" y="124" width="54" height="22" rx="4"/><rect x="74" y="124" width="22" height="22" rx="4"/><rect x="100" y="124" width="22" height="22" rx="4"/><rect x="126" y="124" width="22" height="22" rx="4"/><rect x="152" y="124" width="22" height="22" rx="4"/><rect x="178" y="124" width="22" height="22" rx="4"/><rect x="204" y="124" width="22" height="22" rx="4"/><rect x="230" y="124" width="22" height="22" rx="4"/><rect x="256" y="124" width="88" height="22" rx="4"/>
+    </g>
+    <g fill="#0a66ff">
+      <rect x="80" y="72" width="22" height="22" rx="4"/>
+      <rect x="62" y="98" width="22" height="22" rx="4"/><rect x="88" y="98" width="22" height="22" rx="4"/><rect x="114" y="98" width="22" height="22" rx="4"/>
+    </g>
+    <rect x="96" y="150" width="168" height="12" rx="4" fill="url(#key)"/>
+    <circle cx="336" cy="26" r="4" fill="#00c2ff"/>
+  </g>
+</svg>

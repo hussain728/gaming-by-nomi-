@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="mic" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1b2336"/><stop offset=".5" stop-color="#3a4665"/><stop offset="1" stop-color="#121a2e"/></linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6fb0ff"/><stop offset="1" stop-color="#0a66ff"/></linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#00c2ff"/><stop offset=".5" stop-color="#0a66ff"/><stop offset="1" stop-color="#6a5cff"/></linearGradient>
+    <pattern id="grill" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="2" fill="#0b1220"/></pattern>
+  </defs>
+  <path d="M30 330l60-40h280l-60 40z" fill="#1b2336"/>
+  <path d="M30 330l60-40h280l-60 40z" fill="none" stroke="url(#pad)" stroke-width="4" stroke-linejoin="round"/>
+  <ellipse cx="200" cy="304" rx="54" ry="12" fill="#0b1220"/>
+  <rect x="192" y="220" width="16" height="84" rx="6" fill="#2b3754"/>
+  <path d="M150 170c0 40 22 62 50 62s50-22 50-62" fill="none" stroke="#2b3754" stroke-width="10" stroke-linecap="round"/>
+  <rect x="160" y="50" width="80" height="160" rx="40" fill="url(#mic)"/>
+  <rect x="164" y="56" width="72" height="92" rx="36" fill="url(#grill)" opacity=".7"/>
+  <rect x="160" y="148" width="80" height="10" fill="url(#blue)"/>
+  <circle cx="200" cy="180" r="8" fill="#0b1220"/>
+  <circle cx="200" cy="180" r="3" fill="#6fb0ff"/>
+  <path d="M176 70c8-8 16-10 24-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".2"/>
+</svg>

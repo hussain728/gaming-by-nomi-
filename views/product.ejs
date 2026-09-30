@@ -1,0 +1,86 @@
+<%- include('partials/head') %>
+
+<section class="pdp">
+  <div class="container">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>/</span>
+      <a href="/shop">Shop</a><span>/</span>
+      <% if (category) { %><a href="/shop?category=<%= category.slug %>"><%= category.name %></a><span>/</span><% } %>
+      <span aria-current="page"><%= product.name %></span>
+    </nav>
+
+    <div class="pdp__grid">
+      <div class="pdp__media reveal">
+        <% if (discount(product)) { %><span class="badge badge--sale">Save <%= discount(product) %>%</span><% } else if (product.isNew) { %><span class="badge">New</span><% } %>
+        <img src="<%= product.image %>" alt="<%= product.name %>">
+      </div>
+
+      <div class="pdp__info">
+        <p class="eyebrow reveal"><%= product.brand %></p>
+        <h1 class="reveal"><%= product.name %></h1>
+        <p class="pdp__short reveal"><%= product.short %></p>
+
+        <div class="price price--lg reveal">
+          <span class="price__now"><%= money(product.price) %></span>
+          <% if (discount(product)) { %><s class="price__was"><%= money(product.comparePrice) %></s><% } %>
+        </div>
+
+        <p class="stock reveal <%= product.inStock ? 'stock--in' : 'stock--out' %>">
+          <span></span><%= product.inStock ? 'In stock — ships within 24 hours' : 'Currently out of stock' %>
+        </p>
+
+        <% if (product.inStock) { %>
+          <div class="pdp__buy reveal">
+            <div class="qty" data-qty>
+              <button type="button" data-qty-minus aria-label="Decrease quantity"><svg class="i i-sm"><use href="#i-minus"/></svg></button>
+              <input type="number" value="1" min="1" max="20" aria-label="Quantity" data-qty-input>
+              <button type="button" data-qty-plus aria-label="Increase quantity"><svg class="i i-sm"><use href="#i-plus"/></svg></button>
+            </div>
+            <button type="button" class="btn btn--primary btn--lg btn--grow" data-add-to-cart="<%= product.id %>" data-name="<%= product.name %>" data-with-qty>Add to Bag</button>
+          </div>
+          <button type="button" class="btn btn--outline btn--lg btn--block reveal" data-buy-now="<%= product.id %>">Buy it now</button>
+        <% } %>
+        <a class="btn btn--wa btn--lg btn--block reveal" target="_blank" rel="noopener"
+           href="<%= waLink('Hi! I want to order: ' + product.name + ' (' + money(product.price) + ')\n' + config.domain + '/product/' + product.slug) %>">
+          <svg class="i"><use href="#i-whatsapp"/></svg> Order on WhatsApp
+        </a>
+
+        <ul class="pdp__perks reveal">
+          <li><svg class="i"><use href="#i-truck"/></svg><span><b>Delivery all over Pakistan</b>Free over <%= money(config.freeShippingOver) %></span></li>
+          <li><svg class="i"><use href="#i-cash"/></svg><span><b>Cash on delivery</b>Pay when it arrives</span></li>
+          <li><svg class="i"><use href="#i-shield"/></svg><span><b>7-day checking warranty</b>Easy replacement</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pdp__details">
+      <div class="reveal">
+        <h2>Overview</h2>
+        <p><%= product.description %></p>
+      </div>
+      <% if (product.specs && Object.keys(product.specs).length) { %>
+        <div class="reveal">
+          <h2>Specifications</h2>
+          <dl class="specs">
+            <% Object.keys(product.specs).forEach(function (k) { %>
+              <div><dt><%= k %></dt><dd><%= product.specs[k] %></dd></div>
+            <% }) %>
+          </dl>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<% if (related.length) { %>
+<section class="section section--tint">
+  <div class="container">
+    <div class="section__head reveal"><h2>You may also like.</h2></div>
+    <div class="grid">
+      <% related.forEach(function (p) { %><%- include('partials/product-card', { p: p }) %><% }) %>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<%- include('partials/footer') %>
