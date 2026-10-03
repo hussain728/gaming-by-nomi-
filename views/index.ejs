@@ -14,7 +14,7 @@
     </div>
     <div class="hero__visual reveal">
       <div class="hero__orbit" aria-hidden="true"></div>
-      <img src="/img/products/headset.svg" alt="Wireless gaming headset" class="hero__img" width="520" height="520">
+      <img src="<%= siteImages.hero %>" alt="Wireless gaming headset" class="hero__img" width="520" height="520">
       <% if (heroProduct) { %>
         <a href="/product/<%= heroProduct.slug %>" class="hero__chip">
           <span><%= heroProduct.brand %> <%= heroProduct.name.split(' ').slice(0, 2).join(' ') %></span>
@@ -51,7 +51,7 @@
             <% if (i < 2) { %><p><%= c.blurb %></p><% } %>
             <span class="cat__more">Shop <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
           </div>
-          <img src="/img/products/<%= c.icon %>.svg" alt="" loading="lazy">
+          <img src="<%= catImage(c) %>" alt="" loading="lazy">
         </a>
       <% }) %>
     </div>
@@ -80,7 +80,7 @@
       <a href="/shop?category=consoles" class="btn btn--light btn--lg">Explore consoles</a>
       <a href="/shop?category=controllers" class="btn btn--ghost-light btn--lg">Controllers</a>
     </div>
-    <img src="/img/products/console.svg" alt="Gaming console" class="showcase__img reveal" loading="lazy">
+    <img src="<%= siteImages.showcase %>" alt="Gaming console" class="showcase__img reveal" loading="lazy">
   </div>
 </section>
 
@@ -90,25 +90,25 @@
       <p class="eyebrow">Wireless Earbuds</p>
       <h3>All-day sound.<br>Zero wires.</h3>
       <span class="btn btn--link">Shop earbuds <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
-      <img src="/img/products/earbuds.svg" alt="" loading="lazy">
+      <img src="<%= siteImages.tileEarbuds %>" alt="" loading="lazy">
     </a>
     <a href="/shop?category=handsfree" class="duo__tile reveal">
       <p class="eyebrow">Handsfree</p>
       <h3>Clear calls.<br>Deep bass.</h3>
       <span class="btn btn--link">Shop handsfree <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
-      <img src="/img/products/handsfree.svg" alt="" loading="lazy">
+      <img src="<%= siteImages.tileHandsfree %>" alt="" loading="lazy">
     </a>
     <a href="/shop?category=smart-watches" class="duo__tile reveal">
       <p class="eyebrow">Smart Watches</p>
       <h3>Your day,<br>on your wrist.</h3>
       <span class="btn btn--link">Shop watches <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
-      <img src="/img/products/watch.svg" alt="" loading="lazy">
+      <img src="<%= siteImages.tileWatches %>" alt="" loading="lazy">
     </a>
     <a href="/shop?category=gaming-mice" class="duo__tile duo__tile--blue reveal">
       <p class="eyebrow">Mice &amp; Keyboards</p>
       <h3>Every click<br>counts.</h3>
       <span class="btn btn--link">Shop mice <svg class="i i-sm"><use href="#i-arrow"/></svg></span>
-      <img src="/img/products/mouse.svg" alt="" loading="lazy">
+      <img src="<%= siteImages.tileMice %>" alt="" loading="lazy">
     </a>
   </div>
 </section>

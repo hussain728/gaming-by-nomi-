@@ -6,7 +6,6 @@
     <h1><%= product && product.id ? 'Edit product' : 'Add product' %></h1>
     <% if (error) { %><p class="form__error"><%= error %></p><% } %>
     <input type="hidden" name="id" value="<%= p.id || '' %>">
-    <input type="hidden" name="image" value="<%= p.image || '' %>">
 
     <label class="field"><span>Product name *</span><input name="name" required maxlength="140" value="<%= p.name || '' %>"></label>
     <div class="form__row">
@@ -20,17 +19,39 @@
       </label>
     </div>
     <div class="form__row">
+      <label class="field"><span>Quantity in stock</span><input name="stock" type="number" min="0" placeholder="Leave empty to not track" value="<%= typeof p.stock === 'number' ? p.stock : '' %>"></label>
+      <span></span>
+    </div>
+    <div class="form__row">
       <label class="field"><span>Price (Rs) *</span><input name="price" type="number" min="0" required value="<%= p.price || '' %>"></label>
       <label class="field"><span>Old price (Rs) — shows discount</span><input name="comparePrice" type="number" min="0" value="<%= p.comparePrice || '' %>"></label>
     </div>
 
     <div class="field">
-      <span>Product image</span>
+      <span>Main picture</span>
       <div class="upload">
         <% if (p.image) { %><img src="<%= p.image %>" alt="" class="thumb thumb--lg"><% } %>
-        <input type="file" name="imageFile" accept="image/jpeg,image/png,image/webp,image/gif">
+        <div class="stack">
+          <input type="file" name="imageFile" accept="image/jpeg,image/png,image/webp,image/gif">
+          <% if (p.image && p.image.indexOf('/uploads/') === 0) { %>
+            <label class="checks"><span><input type="checkbox" name="removeImage"> Delete this picture</span></label>
+          <% } %>
+        </div>
       </div>
-      <small class="muted">JPG, PNG or WEBP up to 5 MB. Square images with a white background look best.</small>
+      <small class="muted">Choose a file to replace the picture. JPG, PNG or WEBP up to 5 MB. Square images with a white background look best.</small>
+    </div>
+
+    <div class="field">
+      <span>More pictures (shown on the product page)</span>
+      <% if (p.gallery && p.gallery.length) { %>
+        <div class="gallery-edit">
+          <% p.gallery.forEach(function (src) { %>
+            <label><img src="<%= src %>" alt="" class="thumb thumb--lg"><span><input type="checkbox" name="removeGallery" value="<%= src %>"> Delete</span></label>
+          <% }) %>
+        </div>
+      <% } %>
+      <input type="file" name="galleryFiles" accept="image/jpeg,image/png,image/webp,image/gif" multiple>
+      <small class="muted">You can pick several pictures at once (up to 12).</small>
     </div>
 
     <label class="field"><span>Short description (shown under the title)</span><input name="short" maxlength="200" value="<%= p.short || '' %>"></label>
@@ -41,7 +62,7 @@
     </label>
 
     <div class="checks">
-      <label><input type="checkbox" name="inStock" <%= p.inStock ? 'checked' : '' %>> In stock</label>
+      <label><input type="checkbox" name="inStock" <%= p.inStock ? 'checked' : '' %>> In stock (untick = sold out)</label>
       <label><input type="checkbox" name="featured" <%= p.featured ? 'checked' : '' %>> Featured on home page</label>
       <label><input type="checkbox" name="isNew" <%= p.isNew ? 'checked' : '' %>> New arrival</label>
     </div>

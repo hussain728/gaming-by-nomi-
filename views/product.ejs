@@ -10,9 +10,19 @@
     </nav>
 
     <div class="pdp__grid">
-      <div class="pdp__media reveal">
-        <% if (discount(product)) { %><span class="badge badge--sale">Save <%= discount(product) %>%</span><% } else if (product.isNew) { %><span class="badge">New</span><% } %>
-        <img src="<%= product.image %>" alt="<%= product.name %>">
+      <% var pics = [product.image].concat(product.gallery || []); %>
+      <div class="pdp__gallery reveal">
+        <div class="pdp__media">
+          <% if (discount(product)) { %><span class="badge badge--sale">Save <%= discount(product) %>%</span><% } else if (product.isNew) { %><span class="badge">New</span><% } %>
+          <img src="<%= product.image %>" alt="<%= product.name %>" data-gallery-main>
+        </div>
+        <% if (pics.length > 1) { %>
+          <div class="pdp__thumbs">
+            <% pics.forEach(function (src, i) { %>
+              <button type="button" class="<%= i === 0 ? 'is-active' : '' %>" data-gallery-thumb="<%= src %>" aria-label="Show picture <%= i + 1 %>"><img src="<%= src %>" alt="" loading="lazy"></button>
+            <% }) %>
+          </div>
+        <% } %>
       </div>
 
       <div class="pdp__info">
@@ -25,15 +35,16 @@
           <% if (discount(product)) { %><s class="price__was"><%= money(product.comparePrice) %></s><% } %>
         </div>
 
-        <p class="stock reveal <%= product.inStock ? 'stock--in' : 'stock--out' %>">
-          <span></span><%= product.inStock ? 'In stock — ships within 24 hours' : 'Currently out of stock' %>
+        <% var canBuy = available(product); var maxQty = tracksStock(product) ? Math.min(20, product.stock) : 20; %>
+        <p class="stock reveal <%= canBuy ? 'stock--in' : 'stock--out' %>">
+          <span></span><%= !canBuy ? 'Sold out' : tracksStock(product) && product.stock <= 5 ? 'Only ' + product.stock + ' left — ships within 24 hours' : 'In stock — ships within 24 hours' %>
         </p>
 
-        <% if (product.inStock) { %>
+        <% if (canBuy) { %>
           <div class="pdp__buy reveal">
             <div class="qty" data-qty>
               <button type="button" data-qty-minus aria-label="Decrease quantity"><svg class="i i-sm"><use href="#i-minus"/></svg></button>
-              <input type="number" value="1" min="1" max="20" aria-label="Quantity" data-qty-input>
+              <input type="number" value="1" min="1" max="<%= maxQty %>" aria-label="Quantity" data-qty-input>
               <button type="button" data-qty-plus aria-label="Increase quantity"><svg class="i i-sm"><use href="#i-plus"/></svg></button>
             </div>
             <button type="button" class="btn btn--primary btn--lg btn--grow" data-add-to-cart="<%= product.id %>" data-name="<%= product.name %>" data-with-qty>Add to Bag</button>

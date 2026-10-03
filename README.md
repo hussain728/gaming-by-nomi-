@@ -4,7 +4,7 @@ A fast, clean white & blue store for gaming gear and electronics (headsets, earb
 
 - **Storefront:** home, shop with category filters, search and sort, product pages, bag, checkout, about, contact, and policy pages
 - **Checkout:** cash on delivery. Orders are saved on the server, and WhatsApp opens with the full order details (0342 7704070)
-- **Admin panel** (`/admin`): add, edit and delete products, upload photos, manage order status and read contact messages
+- **Admin panel** (`/admin`): add, edit and delete products; quick-edit price, description and quantity; add stock and mark items sold out; upload, replace and delete product, category and home page pictures; manage order status and read contact messages
 - **No database needed.** Data lives in JSON files in `data/`, so it runs on any shared hosting
 
 ---
@@ -46,17 +46,20 @@ Open http://localhost:3000. The admin panel is at http://localhost:3000/admin (d
 
 | What | Where |
 | --- | --- |
-| Products, prices, photos, stock | `/admin` → Products (or edit `data/products.json`) |
+| Products, prices, descriptions, quantity, sold out | `/admin` → Products (or edit `data/products.json`) |
+| Category names, text and pictures | `/admin` → Categories |
+| Home page pictures and all uploaded pictures | `/admin` → Pictures |
 | Orders and their status | `/admin` → Orders (saved in `data/orders.json`) |
 | Contact form messages | `/admin` → Messages |
 | Phone, WhatsApp, email, delivery fee, free-delivery limit, social links | `config.js` |
-| Categories | `data/categories.json` |
 | Shipping, returns, privacy and terms text | `data/policies.json` |
 | Colours and design | `public/css/style.css` (colour variables at the top) |
 
-**Product photos:** upload them from the admin panel. Square images (for example 800×800) with a white or transparent background look best. Until you upload real photos, each product shows a matching illustration.
+**Product photos:** upload them from the admin panel. Click **Change** next to a product to replace its picture, or open **Edit all** to add more pictures for the product page. Square images (for example 800×800) with a white or transparent background look best. Until you upload real photos, each product shows a matching illustration.
 
 **Starter catalogue:** the 39 products and prices included are samples. Edit or replace them with your real stock and prices.
+
+**Quantity:** type a number in the quantity box to count stock. Each order lowers it, and at 0 the product shows as sold out. Leave it empty if you don't want to count stock.
 
 **Backups:** download the `data/` and `public/uploads/` folders from File Manager from time to time. They hold your products, orders and uploaded photos.
 

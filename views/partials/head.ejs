@@ -38,7 +38,7 @@
           <div class="mega__grid container">
             <% categories.forEach(function (c) { %>
               <a class="mega__item" href="/shop?category=<%= c.slug %>">
-                <img src="/img/products/<%= c.icon %>.svg" alt="" loading="lazy">
+                <img src="<%= catImage(c) %>" alt="" loading="lazy">
                 <span><%= c.name %></span>
               </a>
             <% }) %>

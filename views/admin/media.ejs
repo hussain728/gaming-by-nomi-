@@ -1,0 +1,52 @@
+<%- include('_head') %>
+<div class="container">
+  <% if (flash) { %><div class="notice notice--ok" style="margin-top:24px"><%= flash %></div><% } %>
+
+  <section class="admin-section" id="site" style="margin-top:24px">
+    <h2>Home page pictures</h2>
+    <p class="muted" style="margin:-8px 0 18px">Upload a new picture to replace one, or reset it to the original illustration.</p>
+    <div class="cards-admin">
+      <% Object.keys(siteKeys).forEach(function (k) { %>
+        <div class="card-admin">
+          <div class="card-admin__pic"><img src="<%= siteImages[k] %>" alt=""></div>
+          <b><%= siteKeys[k].label %></b>
+          <form method="post" action="/admin/site-images/<%= k %>" enctype="multipart/form-data" class="card-admin__row">
+            <label class="btn btn--primary btn--sm pic-btn" style="height:34px;padding:0 14px;color:#fff;border:0;background:var(--blue)">Upload new<input type="file" name="imageFile" accept="image/jpeg,image/png,image/webp,image/gif" data-autosubmit></label>
+          </form>
+          <% if (siteCustom[k]) { %>
+            <form method="post" action="/admin/site-images/<%= k %>" data-confirm="Delete this picture and go back to the original?">
+              <input type="hidden" name="reset" value="1">
+              <button class="btn btn--danger btn--sm"><svg class="i i-sm"><use href="#i-trash"/></svg> Delete &amp; reset</button>
+            </form>
+          <% } %>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+  <section class="admin-section" id="library">
+    <h2>All uploaded pictures</h2>
+    <form class="dropzone" method="post" action="/admin/media/upload" enctype="multipart/form-data">
+      <input type="file" name="files" accept="image/jpeg,image/png,image/webp,image/gif" multiple required>
+      <button class="btn btn--primary btn--sm">Upload pictures</button>
+      <span class="muted small">Up to 20 at a time, 5 MB each. To put a picture on a product, use Change on the Products list.</span>
+    </form>
+    <% if (!files.length) { %><p class="muted" style="margin-top:16px">No pictures uploaded yet.</p><% } %>
+    <div class="cards-admin" style="margin-top:16px">
+      <% files.forEach(function (f) { %>
+        <div class="card-admin">
+          <a class="card-admin__pic" href="<%= f.src %>" target="_blank"><img src="<%= f.src %>" alt="" loading="lazy"></a>
+          <div class="card-admin__meta"><%= f.name %> · <%= Math.round(f.size / 1024) %> KB</div>
+          <div class="small"><%= f.usedBy.length ? 'Used by: ' + f.usedBy.join(', ') : 'Not used anywhere' %></div>
+          <form method="post" action="/admin/media/delete" data-confirm="<%= f.usedBy.length ? 'This picture is used by: ' + f.usedBy.join(', ') + '. Delete it anyway? They will go back to the default picture.' : 'Delete this picture?' %>">
+            <input type="hidden" name="src" value="<%= f.src %>">
+            <button class="btn btn--danger btn--sm"><svg class="i i-sm"><use href="#i-trash"/></svg> Delete</button>
+          </form>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+</div>
+</main>
+<script src="/js/main.js" defer></script>
+</body></html>

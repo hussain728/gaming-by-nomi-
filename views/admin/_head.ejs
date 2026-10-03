@@ -18,6 +18,8 @@
       <nav>
         <a href="/admin#orders">Orders</a>
         <a href="/admin#products">Products</a>
+        <a href="/admin/categories" class="<%= path === '/admin/categories' ? 'is-active' : '' %>">Categories</a>
+        <a href="/admin/media" class="<%= path === '/admin/media' ? 'is-active' : '' %>">Pictures</a>
         <a href="/admin#messages">Messages</a>
         <a href="/" target="_blank">View store</a>
         <form method="post" action="/admin/logout"><button class="btn btn--outline btn--sm">Log out</button></form>

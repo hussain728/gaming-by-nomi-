@@ -1,0 +1,32 @@
+<%- include('_head') %>
+<div class="container">
+  <% if (flash) { %><div class="notice notice--ok" style="margin-top:24px"><%= flash %></div><% } %>
+  <section class="admin-section" style="margin-top:24px">
+    <h2>Categories</h2>
+    <p class="muted" style="margin:-8px 0 18px">Change each category's picture, name and text. They show on the home page and in the Categories menu.</p>
+    <div class="cards-admin">
+      <% list.forEach(function (c) { %>
+        <div class="card-admin" id="c-<%= c.slug %>">
+          <div class="card-admin__pic"><img src="<%= catImage(c) %>" alt="<%= c.name %>"></div>
+          <form class="form" method="post" action="/admin/categories/<%= c.slug %>" enctype="multipart/form-data">
+            <label class="field"><span>Name</span><input name="name" maxlength="60" required value="<%= c.name %>"></label>
+            <label class="field"><span>Short text</span><input name="blurb" maxlength="200" value="<%= c.blurb || '' %>"></label>
+            <label class="field"><span><%= c.image ? 'Replace picture' : 'Upload picture' %></span><input type="file" name="imageFile" accept="image/jpeg,image/png,image/webp,image/gif"></label>
+            <div class="card-admin__row">
+              <% if (c.image) { %>
+                <label class="small" style="display:flex;gap:6px;align-items:center;color:var(--red)"><input type="checkbox" name="removeImage"> Delete picture (use default)</label>
+              <% } %>
+            </div>
+            <div class="card-admin__row">
+              <button class="btn btn--primary btn--sm">Save</button>
+              <a class="btn btn--link btn--sm" href="/shop?category=<%= c.slug %>" target="_blank"><%= counts[c.slug] || 0 %> products</a>
+            </div>
+          </form>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+</div>
+</main>
+<script src="/js/main.js" defer></script>
+</body></html>

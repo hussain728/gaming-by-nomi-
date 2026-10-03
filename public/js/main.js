@@ -142,7 +142,27 @@
   if (qtyBox) {
     var qInput = $('[data-qty-input]', qtyBox);
     $('[data-qty-minus]', qtyBox).addEventListener('click', function () { qInput.value = Math.max(1, (parseInt(qInput.value, 10) || 1) - 1); });
-    $('[data-qty-plus]', qtyBox).addEventListener('click', function () { qInput.value = Math.min(20, (parseInt(qInput.value, 10) || 1) + 1); });
+    $('[data-qty-plus]', qtyBox).addEventListener('click', function () { qInput.value = Math.min(parseInt(qInput.max, 10) || 20, (parseInt(qInput.value, 10) || 1) + 1); });
+  }
+
+  /* ---------- Product picture gallery ---------- */
+  var galleryMain = $('[data-gallery-main]');
+  $$('[data-gallery-thumb]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      galleryMain.src = btn.getAttribute('data-gallery-thumb');
+      $$('[data-gallery-thumb]').forEach(function (b) { b.classList.toggle('is-active', b === btn); });
+    });
+  });
+
+  /* ---------- Admin: filter the products table ---------- */
+  var adminFilter = $('[data-admin-filter]');
+  if (adminFilter) {
+    adminFilter.addEventListener('input', function () {
+      var q = adminFilter.value.trim().toLowerCase();
+      $$('[data-filter-row]').forEach(function (row) {
+        row.hidden = q && row.getAttribute('data-filter-row').indexOf(q) === -1;
+      });
+    });
   }
 
   /* ---------- Small helpers ---------- */

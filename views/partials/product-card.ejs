@@ -11,7 +11,7 @@
         <span class="price__now"><%= money(p.price) %></span>
         <% if (discount(p)) { %><s class="price__was"><%= money(p.comparePrice) %></s><% } %>
       </div>
-      <% if (p.inStock) { %>
+      <% if (available(p)) { %>
         <button type="button" class="card__add" data-add-to-cart="<%= p.id %>" data-name="<%= p.name %>" aria-label="Add <%= p.name %> to bag">
           <svg class="i"><use href="#i-plus"/></svg>
         </button>

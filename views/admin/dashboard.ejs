@@ -1,5 +1,6 @@
 <%- include('_head') %>
 <div class="container">
+  <% if (flash) { %><div class="notice notice--ok" style="margin-top:24px"><%= flash %></div><% } %>
   <% if (usingDefaultPassword) { %>
     <div class="notice notice--warn">You are using the default admin password. Set <b>ADMIN_PASSWORD</b> in cPanel → Setup Node.js App → Environment variables, then restart the app.</div>
   <% } %>
@@ -8,7 +9,7 @@
     <div class="stat"><b><%= orders.length %></b><span>Total orders</span></div>
     <div class="stat"><b><%= orders.filter(function (o) { return o.status === 'new'; }).length %></b><span>New orders</span></div>
     <div class="stat"><b><%= money(revenue) %></b><span>Order value</span></div>
-    <div class="stat"><b><%= products.length %></b><span>Products</span></div>
+    <div class="stat"><b><%= products.length %></b><span>Products (<%= soldOut %> sold out)</span></div>
   </div>
 
   <section id="orders" class="admin-section">
@@ -52,28 +53,91 @@
       <h2>Products</h2>
       <a href="/admin/products/new" class="btn btn--primary"><svg class="i i-sm"><use href="#i-plus"/></svg> Add product</a>
     </div>
+    <input type="search" class="mini admin-search" style="width:100%" placeholder="Search products…" data-admin-filter aria-label="Search products">
     <div class="table-wrap">
-      <table class="table">
-        <thead><tr><th></th><th>Name</th><th>Category</th><th>Price</th><th>Stock</th><th></th></tr></thead>
+      <table class="table table--products">
+        <thead><tr><th>Picture</th><th>Product &amp; description</th><th>Price (Rs)</th><th>Quantity</th><th>Status</th><th></th></tr></thead>
         <tbody>
-        <% products.forEach(function (p) { %>
-          <tr>
-            <td><img src="<%= p.image %>" alt="" class="thumb"></td>
-            <td><b><%= p.name %></b><br><span class="muted small"><%= p.brand %><%= p.featured ? ' · Featured' : '' %><%= p.isNew ? ' · New' : '' %></span></td>
-            <td class="small"><%= p.category %></td>
-            <td><%= money(p.price) %></td>
-            <td><span class="pill pill--<%= p.inStock ? 'delivered' : 'cancelled' %>"><%= p.inStock ? 'In stock' : 'Sold out' %></span></td>
-            <td class="actions">
-              <a href="/admin/products/<%= p.id %>" class="btn btn--outline btn--sm">Edit</a>
-              <form method="post" action="/admin/products/<%= p.id %>/delete" data-confirm="Delete <%= p.name %>?">
-                <button class="btn btn--danger btn--sm" aria-label="Delete"><svg class="i i-sm"><use href="#i-trash"/></svg></button>
+        <% products.forEach(function (p) { var ok = available(p); %>
+          <tr id="p-<%= p.id %>" data-filter-row="<%= (p.name + ' ' + p.brand + ' ' + p.category).toLowerCase() %>">
+            <td>
+              <div class="pic-cell">
+                <img src="<%= p.image %>" alt="" class="thumb">
+                <div class="pic-tools">
+                  <form method="post" action="/admin/products/<%= p.id %>/image" enctype="multipart/form-data">
+                    <label class="pic-btn" title="Upload a new picture">Change<input type="file" name="imageFile" accept="image/jpeg,image/png,image/webp,image/gif" data-autosubmit></label>
+                  </form>
+                  <% if (p.image && p.image.indexOf('/uploads/') === 0) { %>
+                    <form method="post" action="/admin/products/<%= p.id %>/image/delete" data-confirm="Delete the picture of <%= p.name %>?">
+                      <button class="pic-btn pic-btn--danger" title="Delete picture" aria-label="Delete picture"><svg class="i i-sm"><use href="#i-trash"/></svg></button>
+                    </form>
+                  <% } %>
+                </div>
+              </div>
+            </td>
+            <td>
+              <b><%= p.name %></b><br><span class="muted small"><%= p.brand %> · <%= p.category %><%= p.featured ? ' · Featured' : '' %><%= p.isNew ? ' · New' : '' %><%= p.gallery ? ' · ' + (p.gallery.length + 1) + ' pictures' : '' %></span>
+              <details class="desc-edit">
+                <summary>Edit description</summary>
+                <form method="post" action="/admin/products/<%= p.id %>/description">
+                  <span class="mini-label">Short description</span>
+                  <input name="short" maxlength="200" value="<%= p.short || '' %>">
+                  <span class="mini-label">Full description</span>
+                  <textarea name="description" rows="4" maxlength="5000"><%= p.description || '' %></textarea>
+                  <button class="btn btn--primary btn--sm">Save description</button>
+                </form>
+              </details>
+            </td>
+            <td>
+              <span class="mini-label">Price</span>
+              <input class="mini" form="q-<%= p.id %>" name="price" type="number" min="1" required value="<%= p.price %>" aria-label="Price">
+              <span class="mini-label">Old price</span>
+              <input class="mini" form="q-<%= p.id %>" name="comparePrice" type="number" min="0" value="<%= p.comparePrice || '' %>" aria-label="Old price">
+            </td>
+            <td>
+              <span class="mini-label">In stock</span>
+              <input class="mini mini--sm" form="q-<%= p.id %>" name="stock" type="number" min="0" placeholder="—" value="<%= tracksStock(p) ? p.stock : '' %>" aria-label="Quantity in stock" title="Leave empty to not track quantity">
+              <form method="post" action="/admin/products/<%= p.id %>/add-stock" class="inline-form">
+                <input class="mini mini--sm" name="qty" type="number" min="1" value="1" aria-label="Quantity to add">
+                <button class="btn btn--outline btn--sm" title="Add to quantity"><svg class="i i-sm"><use href="#i-plus"/></svg> Add</button>
               </form>
+            </td>
+            <td>
+              <div class="stack">
+                <% if (ok) { %>
+                  <span class="pill pill--<%= tracksStock(p) && p.stock <= 5 ? 'low' : 'delivered' %>"><%= tracksStock(p) && p.stock <= 5 ? 'Low stock' : 'In stock' %></span>
+                  <form method="post" action="/admin/products/<%= p.id %>/sold-out">
+                    <input type="hidden" name="state" value="out">
+                    <button class="btn btn--sold btn--sm">Mark sold out</button>
+                  </form>
+                <% } else { %>
+                  <span class="pill pill--cancelled">Sold out</span>
+                  <form method="post" action="/admin/products/<%= p.id %>/sold-out">
+                    <input type="hidden" name="state" value="in">
+                    <button class="btn btn--instock btn--sm">Back in stock</button>
+                  </form>
+                <% } %>
+              </div>
+            </td>
+            <td>
+              <div class="stack">
+                <form method="post" action="/admin/products/<%= p.id %>/quick" id="q-<%= p.id %>">
+                  <button class="btn btn--primary btn--sm">Save</button>
+                </form>
+                <div class="actions" style="display:flex;gap:6px">
+                  <a href="/admin/products/<%= p.id %>" class="btn btn--outline btn--sm">Edit all</a>
+                  <form method="post" action="/admin/products/<%= p.id %>/delete" data-confirm="Delete <%= p.name %>?">
+                    <button class="btn btn--danger btn--sm" aria-label="Delete product"><svg class="i i-sm"><use href="#i-trash"/></svg></button>
+                  </form>
+                </div>
+              </div>
             </td>
           </tr>
         <% }) %>
         </tbody>
       </table>
     </div>
+    <p class="muted small" style="margin-top:10px">Change price, old price or quantity and press <b>Save</b> on that row. Leave quantity empty if you don't want to count stock. When quantity reaches 0 (also after orders), the product shows as sold out.</p>
   </section>
 
   <section id="messages" class="admin-section">
