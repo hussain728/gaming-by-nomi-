@@ -535,109 +535,6 @@
     }
   },
   {
-    "id": "p027",
-    "slug": "jbl-flip-6-portable-speaker",
-    "name": "Flip 6 Portable Speaker",
-    "brand": "JBL",
-    "category": "speakers",
-    "price": 24999,
-    "comparePrice": 27999,
-    "inStock": true,
-    "featured": true,
-    "isNew": false,
-    "image": "/img/products/speaker.svg",
-    "short": "Bold JBL Pro sound, IP67 waterproof, 12-hour battery.",
-    "description": "Bold JBL Pro sound, IP67 waterproof, 12-hour battery. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Bluetooth": "5.1",
-      "Battery": "12 hours",
-      "Water": "IP67",
-      "Output": "30 W"
-    }
-  },
-  {
-    "id": "p028",
-    "slug": "nomi-audio-sound-blast-mini-speaker",
-    "name": "Sound Blast Mini Speaker",
-    "brand": "Nomi Audio",
-    "category": "speakers",
-    "price": 3999,
-    "comparePrice": 4999,
-    "inStock": true,
-    "featured": false,
-    "isNew": true,
-    "image": "/img/products/speaker.svg",
-    "short": "Pocket-size speaker with RGB and TWS pairing.",
-    "description": "Pocket-size speaker with RGB and TWS pairing. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Bluetooth": "5.3",
-      "Battery": "8 hours",
-      "Output": "10 W",
-      "Extras": "TWS pairing, RGB"
-    }
-  },
-  {
-    "id": "p029",
-    "slug": "audionic-solo-7-wireless-speaker",
-    "name": "Solo 7 Wireless Speaker",
-    "brand": "Audionic",
-    "category": "speakers",
-    "price": 6499,
-    "comparePrice": 7499,
-    "inStock": true,
-    "featured": false,
-    "isNew": false,
-    "image": "/img/products/speaker.svg",
-    "short": "Rich stereo sound with FM, USB and TF card support.",
-    "description": "Rich stereo sound with FM, USB and TF card support. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Bluetooth": "5.0",
-      "Battery": "10 hours",
-      "Inputs": "USB, TF, AUX, FM"
-    }
-  },
-  {
-    "id": "p030",
-    "slug": "nomi-gear-watch-ultra-smart-watch",
-    "name": "Watch Ultra Smart Watch",
-    "brand": "Nomi Gear",
-    "category": "smart-watches",
-    "price": 5999,
-    "comparePrice": 7499,
-    "inStock": true,
-    "featured": true,
-    "isNew": true,
-    "image": "/img/products/watch.svg",
-    "short": "2.0-inch AMOLED, Bluetooth calling and 100+ sport modes.",
-    "description": "2.0-inch AMOLED, Bluetooth calling and 100+ sport modes. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Display": "2.0 in AMOLED",
-      "Calling": "Bluetooth",
-      "Battery": "Up to 7 days",
-      "Water": "IP68"
-    }
-  },
-  {
-    "id": "p031",
-    "slug": "haylou-solar-plus-rt3-smart-watch",
-    "name": "Solar Plus RT3 Smart Watch",
-    "brand": "Haylou",
-    "category": "smart-watches",
-    "price": 8499,
-    "comparePrice": 9999,
-    "inStock": true,
-    "featured": false,
-    "isNew": false,
-    "image": "/img/products/watch.svg",
-    "short": "Round AMOLED display with SpO2 and heart-rate tracking.",
-    "description": "Round AMOLED display with SpO2 and heart-rate tracking. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Display": "1.43 in AMOLED",
-      "Health": "Heart rate, SpO2, sleep",
-      "Battery": "Up to 10 days"
-    }
-  },
-  {
     "id": "p032",
     "slug": "baseus-20000mah-22-5w-power-bank",
     "name": "20000mAh 22.5W Power Bank",
@@ -683,7 +580,7 @@
     "slug": "baseus-65w-gan-fast-charger",
     "name": "65W GaN Fast Charger",
     "brand": "Baseus",
-    "category": "chargers-cables",
+    "category": "chargers",
     "price": 5999,
     "comparePrice": 6999,
     "inStock": true,
@@ -699,31 +596,11 @@
     }
   },
   {
-    "id": "p035",
-    "slug": "anker-usb-c-to-usb-c-braided-cable-100w",
-    "name": "USB-C to USB-C Braided Cable 100W",
-    "brand": "Anker",
-    "category": "chargers-cables",
-    "price": 1499,
-    "comparePrice": 1899,
-    "inStock": true,
-    "featured": false,
-    "isNew": false,
-    "image": "/img/products/charger.svg",
-    "short": "Nylon-braided 1.8 m cable rated for 100 W.",
-    "description": "Nylon-braided 1.8 m cable rated for 100 W. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Length": "1.8 m",
-      "Power": "100 W",
-      "Build": "Nylon braided"
-    }
-  },
-  {
     "id": "p036",
     "slug": "nomi-gear-20w-usb-c-pd-charger",
     "name": "20W USB-C PD Charger",
     "brand": "Nomi Gear",
-    "category": "chargers-cables",
+    "category": "chargers",
     "price": 1799,
     "comparePrice": 2299,
     "inStock": true,
@@ -736,66 +613,6 @@
       "Output": "20 W",
       "Port": "USB-C PD",
       "Safety": "Over-heat and surge protection"
-    }
-  },
-  {
-    "id": "p037",
-    "slug": "redragon-xl-rgb-gaming-mouse-pad",
-    "name": "XL RGB Gaming Mouse Pad",
-    "brand": "Redragon",
-    "category": "accessories",
-    "price": 2499,
-    "comparePrice": 2999,
-    "inStock": true,
-    "featured": true,
-    "isNew": false,
-    "image": "/img/products/accessory.svg",
-    "short": "800 x 300 mm desk mat with edge RGB lighting.",
-    "description": "800 x 300 mm desk mat with edge RGB lighting. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Size": "800 x 300 x 4 mm",
-      "Surface": "Micro-weave cloth",
-      "Lighting": "RGB edge"
-    }
-  },
-  {
-    "id": "p038",
-    "slug": "fantech-usb-condenser-streaming-mic",
-    "name": "USB Condenser Streaming Mic",
-    "brand": "Fantech",
-    "category": "accessories",
-    "price": 6999,
-    "comparePrice": 7999,
-    "inStock": true,
-    "featured": false,
-    "isNew": true,
-    "image": "/img/products/accessory.svg",
-    "short": "Plug-and-play mic with pop filter and stand.",
-    "description": "Plug-and-play mic with pop filter and stand. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Connectivity": "USB",
-      "Pattern": "Cardioid",
-      "Extras": "Pop filter, tripod stand"
-    }
-  },
-  {
-    "id": "p039",
-    "slug": "nomi-gear-headphone-stand-with-rgb",
-    "name": "Headphone Stand with RGB",
-    "brand": "Nomi Gear",
-    "category": "accessories",
-    "price": 1999,
-    "comparePrice": 2499,
-    "inStock": true,
-    "featured": false,
-    "isNew": false,
-    "image": "/img/products/accessory.svg",
-    "short": "Aluminium stand with RGB base and 2 USB ports.",
-    "description": "Aluminium stand with RGB base and 2 USB ports. Backed by Gaming by Nomi warranty support and delivered to your door anywhere in Pakistan with cash on delivery.",
-    "specs": {
-      "Build": "Aluminium",
-      "Lighting": "RGB",
-      "Ports": "2 x USB"
     }
   }
 ]

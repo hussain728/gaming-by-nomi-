@@ -1,6 +1,6 @@
 # Gaming by Nomi — Online Store
 
-A fast, clean white & blue store for gaming gear and electronics (headsets, earbuds, handsfree, mice, keyboards, controllers, consoles, speakers, smart watches, power banks, chargers and accessories). It is built with **Node.js + Express** and works on desktop, tablet and mobile.
+A fast, clean white & blue store for gaming gear and electronics (headsets, earbuds, handsfree, mice, keyboards, controllers, consoles, power banks and chargers). It is built with **Node.js + Express** and works on desktop, tablet and mobile.
 
 - **Storefront:** home, shop with category filters, search and sort, product pages, bag, checkout, about, contact, and policy pages
 - **Checkout:** cash on delivery. Orders are saved on the server, and WhatsApp opens with the full order details (0342 7704070)

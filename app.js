@@ -381,7 +381,7 @@ admin.post('/products/save', upload.single('imageFile'), (req, res) => {
   else if (clean(req.body.image, 300)) product.image = clean(req.body.image, 300);
   if (!product.image) {
     const cat = store.categories.bySlug(product.category);
-    product.image = '/img/products/' + (cat ? cat.icon : 'accessory') + '.svg';
+    product.image = '/img/products/' + (cat ? cat.icon : 'charger') + '.svg';
   }
 
   if (idx >= 0) {

@@ -6,9 +6,6 @@
   { "slug": "keyboards", "name": "Keyboards", "icon": "keyboard", "blurb": "Mechanical switches and vivid RGB." },
   { "slug": "controllers", "name": "Controllers", "icon": "controller", "blurb": "Gamepads for console, PC and mobile." },
   { "slug": "consoles", "name": "Consoles", "icon": "console", "blurb": "PlayStation, Xbox and Nintendo Switch." },
-  { "slug": "speakers", "name": "Speakers", "icon": "speaker", "blurb": "Portable Bluetooth sound that fills the room." },
-  { "slug": "smart-watches", "name": "Smart Watches", "icon": "watch", "blurb": "Fitness, calls and notifications on your wrist." },
   { "slug": "power-banks", "name": "Power Banks", "icon": "powerbank", "blurb": "Fast-charging power for the whole day." },
-  { "slug": "chargers-cables", "name": "Chargers & Cables", "icon": "charger", "blurb": "Fast chargers and durable braided cables." },
-  { "slug": "accessories", "name": "Accessories", "icon": "accessory", "blurb": "Mouse pads, stands, mics and more." }
+  { "slug": "chargers", "name": "Chargers", "icon": "charger", "blurb": "Fast, safe wall chargers for phones and laptops." }
 ]
